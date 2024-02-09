@@ -199,6 +199,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				5513EC1F2B76CD3F00C83A06 /* PBXTargetDependency */,
+				5513EC212B76CD3F00C83A06 /* PBXTargetDependency */,
+				5513EC232B76CD3F00C83A06 /* PBXTargetDependency */,
+				5513EC252B76CD3F00C83A06 /* PBXTargetDependency */,
+				5513EC272B76CD3F00C83A06 /* PBXTargetDependency */,
 			);
 			name = MovieAppMicro;
 			packageProductDependencies = (
@@ -353,6 +358,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5513EC1F2B76CD3F00C83A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5513EC1E2B76CD3F00C83A06 /* FavoritesMicro */;
+		};
+		5513EC212B76CD3F00C83A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5513EC202B76CD3F00C83A06 /* SearchMicro */;
+		};
+		5513EC232B76CD3F00C83A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5513EC222B76CD3F00C83A06 /* TabMicro */;
+		};
+		5513EC252B76CD3F00C83A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5513EC242B76CD3F00C83A06 /* HomeMic */;
+		};
+		5513EC272B76CD3F00C83A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5513EC262B76CD3F00C83A06 /* Navigation */;
+		};
 		55F57B5A2B75706C008D7AB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 55F57B462B75706A008D7AB0 /* MovieAppMicro */;
@@ -707,6 +732,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5513EC1E2B76CD3F00C83A06 /* FavoritesMicro */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FavoritesMicro;
+		};
+		5513EC202B76CD3F00C83A06 /* SearchMicro */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SearchMicro;
+		};
+		5513EC222B76CD3F00C83A06 /* TabMicro */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TabMicro;
+		};
+		5513EC242B76CD3F00C83A06 /* HomeMic */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeMic;
+		};
+		5513EC262B76CD3F00C83A06 /* Navigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Navigation;
+		};
 		5528B8EF2B769E700022C77D /* TabMicro */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TabMicro;
