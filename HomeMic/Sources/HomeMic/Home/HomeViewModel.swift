@@ -1,12 +1,10 @@
-//
-//  File.swift
-//  
-//
-//  Created by Andrew Brehm on 2/9/24.
-//
-
 import Foundation
+import Navigation
 
 public class HomeViewModel: ObservableObject {
-    
+    var homeRouter = HomeRouter.shared
+
+    func seeCatButtonTapped() {
+        homeRouter.navigate(to: .staticIcon)
+    }
 }

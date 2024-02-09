@@ -1,4 +1,6 @@
 import HomeMic
+import SearchMicro
+import FavoritesMicro
 import SwiftUI
 
 public struct BottomTabView: View {
@@ -6,9 +8,17 @@ public struct BottomTabView: View {
 
     public var body: some View {
         TabView {
-            HomeView()
+            HomeNavigationView()
                 .tabItem {
-                    Label("Home", systemImage: "tray.and.arrow.down.fill")
+                    Label("Home", systemImage: "house")
+                }
+            SearchView()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+            FavoritesView()
+                .tabItem {
+                    Label("Favs", systemImage: "heart")
                 }
         }
     }

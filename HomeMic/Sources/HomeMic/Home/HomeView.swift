@@ -1,3 +1,4 @@
+import Navigation
 import SwiftUI
 
 public struct HomeView: View {
@@ -7,10 +8,13 @@ public struct HomeView: View {
 
     public var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image(systemName: "house")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("HOME VIEW!!!")
+            Button("See a Cat!") {
+                viewModel.seeCatButtonTapped()
+            }
         }
         .padding()
     }

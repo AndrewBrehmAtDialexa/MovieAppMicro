@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5528B8ED2B7690A40022C77D /* HomeMic in Frameworks */ = {isa = PBXBuildFile; productRef = 5528B8EC2B7690A40022C77D /* HomeMic */; };
 		5528B8F02B769E700022C77D /* TabMicro in Frameworks */ = {isa = PBXBuildFile; productRef = 5528B8EF2B769E700022C77D /* TabMicro */; };
 		55F57B4B2B75706A008D7AB0 /* MovieAppMicroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F57B4A2B75706A008D7AB0 /* MovieAppMicroApp.swift */; };
-		55F57B4D2B75706A008D7AB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F57B4C2B75706A008D7AB0 /* ContentView.swift */; };
 		55F57B4F2B75706C008D7AB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F57B4E2B75706C008D7AB0 /* Assets.xcassets */; };
 		55F57B532B75706C008D7AB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F57B522B75706C008D7AB0 /* Preview Assets.xcassets */; };
 		55F57B5D2B75706C008D7AB0 /* MovieAppMicroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F57B5C2B75706C008D7AB0 /* MovieAppMicroTests.swift */; };
@@ -55,6 +53,12 @@
 /* Begin PBXFileReference section */
 		5528B8EB2B768F810022C77D /* HomeMic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeMic; path = ../../../HomeMic; sourceTree = "<group>"; };
 		5528B8EE2B76988E0022C77D /* TabMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TabMicro; path = ../../../TabMicro; sourceTree = "<group>"; };
+		5528B8F12B76A9250022C77D /* SearchMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SearchMicro; path = ../../../SearchMicro; sourceTree = "<group>"; };
+		5528B8F22B76AB4F0022C77D /* FavoritesMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FavoritesMicro; path = ../../../FavoritesMicro; sourceTree = "<group>"; };
+		5528B8F32B76BB6D0022C77D /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		5528B8F52B76BB980022C77D /* NavigationPathWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathWrapper.swift; sourceTree = "<group>"; };
+		5528B8F72B76BCB20022C77D /* DummyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyView.swift; sourceTree = "<group>"; };
+		5528B8F92B76BD0A0022C77D /* DummyChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyChild.swift; sourceTree = "<group>"; };
 		556324382B7686B30012C3CD /* Navigation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Navigation; path = ../../../Navigation; sourceTree = "<group>"; };
 		55F57B472B75706A008D7AB0 /* MovieAppMicro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieAppMicro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F57B4A2B75706A008D7AB0 /* MovieAppMicroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroApp.swift; sourceTree = "<group>"; };
@@ -75,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5528B8ED2B7690A40022C77D /* HomeMic in Frameworks */,
 				5528B8F02B769E700022C77D /* TabMicro in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +121,8 @@
 		5563243C2B7687BB0012C3CD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5528B8F22B76AB4F0022C77D /* FavoritesMicro */,
+				5528B8F12B76A9250022C77D /* SearchMicro */,
 				5528B8EE2B76988E0022C77D /* TabMicro */,
 				5528B8EB2B768F810022C77D /* HomeMic */,
 			);
@@ -155,6 +160,10 @@
 				55F57B502B75706C008D7AB0 /* MovieAppMicro.entitlements */,
 				55F57B4A2B75706A008D7AB0 /* MovieAppMicroApp.swift */,
 				55F57B512B75706C008D7AB0 /* Preview Content */,
+				5528B8F32B76BB6D0022C77D /* HomeRouter.swift */,
+				5528B8F52B76BB980022C77D /* NavigationPathWrapper.swift */,
+				5528B8F72B76BCB20022C77D /* DummyView.swift */,
+				5528B8F92B76BD0A0022C77D /* DummyChild.swift */,
 			);
 			path = MovieAppMicro;
 			sourceTree = "<group>";
@@ -203,7 +212,6 @@
 			);
 			name = MovieAppMicro;
 			packageProductDependencies = (
-				5528B8EC2B7690A40022C77D /* HomeMic */,
 				5528B8EF2B769E700022C77D /* TabMicro */,
 			);
 			productName = MovieAppMicro;
@@ -330,7 +338,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F57B4D2B75706A008D7AB0 /* ContentView.swift in Sources */,
 				55F57B4B2B75706A008D7AB0 /* MovieAppMicroApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,10 +717,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5528B8EC2B7690A40022C77D /* HomeMic */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = HomeMic;
-		};
 		5528B8EF2B769E700022C77D /* TabMicro */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TabMicro;
