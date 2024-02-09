@@ -55,14 +55,9 @@
 		5528B8EE2B76988E0022C77D /* TabMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TabMicro; path = ../../../TabMicro; sourceTree = "<group>"; };
 		5528B8F12B76A9250022C77D /* SearchMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SearchMicro; path = ../../../SearchMicro; sourceTree = "<group>"; };
 		5528B8F22B76AB4F0022C77D /* FavoritesMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FavoritesMicro; path = ../../../FavoritesMicro; sourceTree = "<group>"; };
-		5528B8F32B76BB6D0022C77D /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		5528B8F52B76BB980022C77D /* NavigationPathWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathWrapper.swift; sourceTree = "<group>"; };
-		5528B8F72B76BCB20022C77D /* DummyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyView.swift; sourceTree = "<group>"; };
-		5528B8F92B76BD0A0022C77D /* DummyChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyChild.swift; sourceTree = "<group>"; };
 		556324382B7686B30012C3CD /* Navigation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Navigation; path = ../../../Navigation; sourceTree = "<group>"; };
 		55F57B472B75706A008D7AB0 /* MovieAppMicro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieAppMicro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F57B4A2B75706A008D7AB0 /* MovieAppMicroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroApp.swift; sourceTree = "<group>"; };
-		55F57B4C2B75706A008D7AB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		55F57B4E2B75706C008D7AB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55F57B502B75706C008D7AB0 /* MovieAppMicro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MovieAppMicro.entitlements; sourceTree = "<group>"; };
 		55F57B522B75706C008D7AB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -156,14 +151,9 @@
 				5563243C2B7687BB0012C3CD /* Modules */,
 				556324242B76770F0012C3CD /* Utilities */,
 				55F57B4E2B75706C008D7AB0 /* Assets.xcassets */,
-				55F57B4C2B75706A008D7AB0 /* ContentView.swift */,
 				55F57B502B75706C008D7AB0 /* MovieAppMicro.entitlements */,
 				55F57B4A2B75706A008D7AB0 /* MovieAppMicroApp.swift */,
 				55F57B512B75706C008D7AB0 /* Preview Content */,
-				5528B8F32B76BB6D0022C77D /* HomeRouter.swift */,
-				5528B8F52B76BB980022C77D /* NavigationPathWrapper.swift */,
-				5528B8F72B76BCB20022C77D /* DummyView.swift */,
-				5528B8F92B76BD0A0022C77D /* DummyChild.swift */,
 			);
 			path = MovieAppMicro;
 			sourceTree = "<group>";
