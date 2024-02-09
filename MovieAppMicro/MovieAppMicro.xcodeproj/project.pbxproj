@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5513EC292B76D18A00C83A06 /* TabMicro in Frameworks */ = {isa = PBXBuildFile; productRef = 5513EC282B76D18A00C83A06 /* TabMicro */; };
+		55F330372B76D42E00AC80BF /* TabMicro in Resources */ = {isa = PBXBuildFile; fileRef = 55F330362B76D42E00AC80BF /* TabMicro */; };
+		55F3303E2B76D4B000AC80BF /* HomeMic in Resources */ = {isa = PBXBuildFile; fileRef = 55F3303B2B76D4B000AC80BF /* HomeMic */; };
+		55F3303F2B76D4B000AC80BF /* FavoritesMicro in Resources */ = {isa = PBXBuildFile; fileRef = 55F3303C2B76D4B000AC80BF /* FavoritesMicro */; };
+		55F330402B76D4B000AC80BF /* SearchMicro in Resources */ = {isa = PBXBuildFile; fileRef = 55F3303D2B76D4B000AC80BF /* SearchMicro */; };
+		55F330422B76D66200AC80BF /* Navigation in Resources */ = {isa = PBXBuildFile; fileRef = 55F330412B76D66200AC80BF /* Navigation */; };
 		55F57B4B2B75706A008D7AB0 /* MovieAppMicroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F57B4A2B75706A008D7AB0 /* MovieAppMicroApp.swift */; };
 		55F57B4F2B75706C008D7AB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F57B4E2B75706C008D7AB0 /* Assets.xcassets */; };
 		55F57B532B75706C008D7AB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F57B522B75706C008D7AB0 /* Preview Assets.xcassets */; };
@@ -51,11 +56,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5528B8EB2B768F810022C77D /* HomeMic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeMic; path = ../../../HomeMic; sourceTree = "<group>"; };
-		5528B8EE2B76988E0022C77D /* TabMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TabMicro; path = ../../../TabMicro; sourceTree = "<group>"; };
-		5528B8F12B76A9250022C77D /* SearchMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SearchMicro; path = ../../../SearchMicro; sourceTree = "<group>"; };
-		5528B8F22B76AB4F0022C77D /* FavoritesMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FavoritesMicro; path = ../../../FavoritesMicro; sourceTree = "<group>"; };
-		556324382B7686B30012C3CD /* Navigation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Navigation; path = ../../../Navigation; sourceTree = "<group>"; };
+		55F330362B76D42E00AC80BF /* TabMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TabMicro; path = ../../TabMicro; sourceTree = "<group>"; };
+		55F3303B2B76D4B000AC80BF /* HomeMic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeMic; path = ../../HomeMic; sourceTree = "<group>"; };
+		55F3303C2B76D4B000AC80BF /* FavoritesMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FavoritesMicro; path = ../../FavoritesMicro; sourceTree = "<group>"; };
+		55F3303D2B76D4B000AC80BF /* SearchMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SearchMicro; path = ../../SearchMicro; sourceTree = "<group>"; };
+		55F330412B76D66200AC80BF /* Navigation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Navigation; path = ../../Navigation; sourceTree = "<group>"; };
 		55F57B472B75706A008D7AB0 /* MovieAppMicro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieAppMicro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F57B4A2B75706A008D7AB0 /* MovieAppMicroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroApp.swift; sourceTree = "<group>"; };
 		55F57B4E2B75706C008D7AB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,23 +110,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		556324242B76770F0012C3CD /* Utilities */ = {
+		55F330352B76D41200AC80BF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				556324382B7686B30012C3CD /* Navigation */,
+				55F3303C2B76D4B000AC80BF /* FavoritesMicro */,
+				55F3303B2B76D4B000AC80BF /* HomeMic */,
+				55F3303D2B76D4B000AC80BF /* SearchMicro */,
+				55F330362B76D42E00AC80BF /* TabMicro */,
 			);
-			path = Utilities;
+			name = Modules;
 			sourceTree = "<group>";
 		};
-		5563243C2B7687BB0012C3CD /* Modules */ = {
+		55F330382B76D46400AC80BF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				5528B8F22B76AB4F0022C77D /* FavoritesMicro */,
-				5528B8F12B76A9250022C77D /* SearchMicro */,
-				5528B8EE2B76988E0022C77D /* TabMicro */,
-				5528B8EB2B768F810022C77D /* HomeMic */,
+				55F330412B76D66200AC80BF /* Navigation */,
 			);
-			path = Modules;
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		55F57B3E2B75706A008D7AB0 = {
@@ -148,8 +153,8 @@
 		55F57B492B75706A008D7AB0 /* MovieAppMicro */ = {
 			isa = PBXGroup;
 			children = (
-				5563243C2B7687BB0012C3CD /* Modules */,
-				556324242B76770F0012C3CD /* Utilities */,
+				55F330382B76D46400AC80BF /* Utilities */,
+				55F330352B76D41200AC80BF /* Modules */,
 				55F57B4E2B75706C008D7AB0 /* Assets.xcassets */,
 				55F57B502B75706C008D7AB0 /* MovieAppMicro.entitlements */,
 				55F57B4A2B75706A008D7AB0 /* MovieAppMicroApp.swift */,
@@ -303,7 +308,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F57B532B75706C008D7AB0 /* Preview Assets.xcassets in Resources */,
+				55F3303F2B76D4B000AC80BF /* FavoritesMicro in Resources */,
+				55F330402B76D4B000AC80BF /* SearchMicro in Resources */,
+				55F3303E2B76D4B000AC80BF /* HomeMic in Resources */,
+				55F330422B76D66200AC80BF /* Navigation in Resources */,
 				55F57B4F2B75706C008D7AB0 /* Assets.xcassets in Resources */,
+				55F330372B76D42E00AC80BF /* TabMicro in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
