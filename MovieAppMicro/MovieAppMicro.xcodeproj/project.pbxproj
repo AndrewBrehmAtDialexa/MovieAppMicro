@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5528B8F02B769E700022C77D /* TabMicro in Frameworks */ = {isa = PBXBuildFile; productRef = 5528B8EF2B769E700022C77D /* TabMicro */; };
+		5513EC292B76D18A00C83A06 /* TabMicro in Frameworks */ = {isa = PBXBuildFile; productRef = 5513EC282B76D18A00C83A06 /* TabMicro */; };
 		55F57B4B2B75706A008D7AB0 /* MovieAppMicroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F57B4A2B75706A008D7AB0 /* MovieAppMicroApp.swift */; };
 		55F57B4F2B75706C008D7AB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F57B4E2B75706C008D7AB0 /* Assets.xcassets */; };
 		55F57B532B75706C008D7AB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F57B522B75706C008D7AB0 /* Preview Assets.xcassets */; };
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5528B8F02B769E700022C77D /* TabMicro in Frameworks */,
+				5513EC292B76D18A00C83A06 /* TabMicro in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,15 +199,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				5513EC1F2B76CD3F00C83A06 /* PBXTargetDependency */,
-				5513EC212B76CD3F00C83A06 /* PBXTargetDependency */,
-				5513EC232B76CD3F00C83A06 /* PBXTargetDependency */,
-				5513EC252B76CD3F00C83A06 /* PBXTargetDependency */,
-				5513EC272B76CD3F00C83A06 /* PBXTargetDependency */,
 			);
 			name = MovieAppMicro;
 			packageProductDependencies = (
-				5528B8EF2B769E700022C77D /* TabMicro */,
+				5513EC282B76D18A00C83A06 /* TabMicro */,
 			);
 			productName = MovieAppMicro;
 			productReference = 55F57B472B75706A008D7AB0 /* MovieAppMicro.app */;
@@ -358,26 +353,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5513EC1F2B76CD3F00C83A06 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 5513EC1E2B76CD3F00C83A06 /* FavoritesMicro */;
-		};
-		5513EC212B76CD3F00C83A06 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 5513EC202B76CD3F00C83A06 /* SearchMicro */;
-		};
-		5513EC232B76CD3F00C83A06 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 5513EC222B76CD3F00C83A06 /* TabMicro */;
-		};
-		5513EC252B76CD3F00C83A06 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 5513EC242B76CD3F00C83A06 /* HomeMic */;
-		};
-		5513EC272B76CD3F00C83A06 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 5513EC262B76CD3F00C83A06 /* Navigation */;
-		};
 		55F57B5A2B75706C008D7AB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 55F57B462B75706A008D7AB0 /* MovieAppMicro */;
@@ -732,27 +707,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5513EC1E2B76CD3F00C83A06 /* FavoritesMicro */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FavoritesMicro;
-		};
-		5513EC202B76CD3F00C83A06 /* SearchMicro */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SearchMicro;
-		};
-		5513EC222B76CD3F00C83A06 /* TabMicro */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TabMicro;
-		};
-		5513EC242B76CD3F00C83A06 /* HomeMic */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = HomeMic;
-		};
-		5513EC262B76CD3F00C83A06 /* Navigation */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Navigation;
-		};
-		5528B8EF2B769E700022C77D /* TabMicro */ = {
+		5513EC282B76D18A00C83A06 /* TabMicro */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TabMicro;
 		};
