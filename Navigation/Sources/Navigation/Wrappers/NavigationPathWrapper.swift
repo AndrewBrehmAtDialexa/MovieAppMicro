@@ -8,10 +8,14 @@ public class NavigationPathWrapper: ObservableObject {
     }
     
     func navigateBack() {
+        guard navPath.count > 0 else { return }
+            
         navPath.removeLast()
     }
     
     func navigateToRoot() {
+        guard navPath.count > 0 else { return }
+        
         navPath.removeLast(navPath.count)
     }
 }
