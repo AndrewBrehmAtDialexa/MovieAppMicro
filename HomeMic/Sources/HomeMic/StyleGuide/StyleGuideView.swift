@@ -2,7 +2,8 @@ import SwiftUI
 import SharedUIs
 
 public struct StyleGuideView: View {
-    @ObservedObject var viewModel = StaticIconViewModel()
+    @State private var searchText: String = ""
+    @State private var isSearching: Bool = false
     
     public init() {}
     
@@ -19,6 +20,9 @@ public struct StyleGuideView: View {
             UnderlineView()
             
             TextGuideView()
+            UnderlineView()
+            
+            SearchBarGuideView(searchText: $searchText, isSearching: $isSearching)
             UnderlineView()
         }
     }
@@ -115,6 +119,31 @@ struct TextGuideView: View {
     }
 }
 
+// SearchBar Guide
+struct SearchBarGuideView: View {
+    @Binding var searchText: String
+    @Binding var isSearching: Bool
+    
+    var body: some View {
+        VStack {
+            Text("Search Bar Guide")
+                .subTitleTextStyle()
+                .padding()
+                .border(Color.secondaryDark)
+            
+            SearchBar(searchText: $searchText, isSearching: $isSearching)
+                .padding()
+            if isSearching {
+                Text("✅ Searching is true | with search term : \(searchText)")
+            } else {
+                Text("❌ Searching is false | with search term : \(searchText)")
+            }
+        }
+        .padding(.bottom)
+    }
+}
+
+// MARK: - Preview
 #Preview {
     StyleGuideView()
 }
