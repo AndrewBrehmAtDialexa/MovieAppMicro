@@ -23,6 +23,7 @@
 		55F57B802B7572F9008D7AB0 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 55F57B7F2B7572F9008D7AB0 /* ViewInspector */; };
 		55F57B832B75731E008D7AB0 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 55F57B822B75731E008D7AB0 /* Nimble */; };
 		55F57B852B757352008D7AB0 /* MovieAppMicroSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F57B842B757352008D7AB0 /* MovieAppMicroSpec.swift */; };
+		B297AFE92B7AA71600F74148 /* SharedUIs in Resources */ = {isa = PBXBuildFile; fileRef = B297AFE82B7AA56700F74148 /* SharedUIs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		55F57B662B75706C008D7AB0 /* MovieAppMicroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroUITests.swift; sourceTree = "<group>"; };
 		55F57B682B75706C008D7AB0 /* MovieAppMicroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		55F57B842B757352008D7AB0 /* MovieAppMicroSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroSpec.swift; sourceTree = "<group>"; };
+		B297AFE82B7AA56700F74148 /* SharedUIs */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SharedUIs; path = ../../../../../SharedUIs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		55F330382B76D46400AC80BF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B297AFE82B7AA56700F74148 /* SharedUIs */,
 				55F330412B76D66200AC80BF /* Navigation */,
 			);
 			name = Utilities;
@@ -307,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B297AFE92B7AA71600F74148 /* SharedUIs in Resources */,
 				55F57B532B75706C008D7AB0 /* Preview Assets.xcassets in Resources */,
 				55F3303F2B76D4B000AC80BF /* FavoritesMicro in Resources */,
 				55F330402B76D4B000AC80BF /* SearchMicro in Resources */,
