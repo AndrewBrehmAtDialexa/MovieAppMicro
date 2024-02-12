@@ -13,7 +13,7 @@ public struct HomeView: View {
                 .foregroundStyle(.tint)
             
             Text("HOME VIEW!!!")
-                .foregroundColor(.primaryDark)
+                .largeTitleTextStyle()
             
             Button("See a Cat!") {
                 viewModel.seeCatButtonTapped()

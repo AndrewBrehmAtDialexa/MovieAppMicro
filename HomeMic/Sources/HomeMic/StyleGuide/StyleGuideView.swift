@@ -24,6 +24,9 @@ public struct StyleGuideView: View {
             
             SearchBarGuideView(searchText: $searchText, isSearching: $isSearching)
             UnderlineView()
+            
+            MovieRowView()
+            UnderlineView()
         }
     }
 }
@@ -110,6 +113,8 @@ struct TextGuideView: View {
                 .largeTitleTextStyle()
             Text(".titleTextStyle()")
                 .titleTextStyle()
+            Text(".smallTitleTextStyle()")
+                .smallTitleTextStyle()
             Text(".subTitleTextStyle()")
                 .subTitleTextStyle()
             Text(".bodyTextStyle()")
@@ -138,6 +143,21 @@ struct SearchBarGuideView: View {
             } else {
                 Text("❌ Searching is false | with search term : \(searchText)")
             }
+        }
+        .padding(.bottom)
+    }
+}
+
+// Movie Row
+struct MovieRowView: View {
+    var body: some View {
+        VStack {
+            Text("Movie Row Guide")
+                .subTitleTextStyle()
+                .padding()
+                .border(Color.secondaryDark)
+            
+            MovieRow()
         }
         .padding(.bottom)
     }
