@@ -5,14 +5,14 @@ import SwiftUI
 
 public struct BottomTabView: View {
     public init() {}
-
+    
     public var body: some View {
         TabView {
             HomeNavigationView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
-            SearchView()
+            SearchNavigationView()
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }
