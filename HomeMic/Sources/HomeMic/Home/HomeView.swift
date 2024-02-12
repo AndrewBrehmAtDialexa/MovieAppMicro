@@ -20,15 +20,10 @@ public struct HomeView: View {
             }
             .buttonStyle(GreenButton(isEnabled: true))
             
-            Button("See a Cat! is Enabled is false ") {
-                viewModel.seeCatButtonTapped()
+            Button("See Style Guide ") {
+                viewModel.seeStyleGuideButtonTapped()
             }
             .buttonStyle(GreenButton(isEnabled: false))
-            
-            Button("See a Cat! with Light Green Color ") {
-                viewModel.seeCatButtonTapped()
-            }
-            .buttonStyle(LightGreenButton())
         }
         .padding()
     }

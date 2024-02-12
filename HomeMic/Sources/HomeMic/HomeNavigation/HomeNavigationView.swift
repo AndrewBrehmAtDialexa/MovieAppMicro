@@ -16,6 +16,8 @@ public struct HomeNavigationView: View {
                     switch destination {
                     case .staticIcon:
                         viewModel.createStaticIconView()
+                    case .styleGuide:
+                        viewModel.createStyleGuideView()
                     }
                 }
                 .onAppear { self.didAppear?(self) }

@@ -5,6 +5,7 @@ public class HomeRouter: ObservableObject {
 
     public enum Destination: Codable, Hashable {
         case staticIcon
+        case styleGuide
     }
 
     @Published public var navPathWrapper = NavigationPathWrapper()
