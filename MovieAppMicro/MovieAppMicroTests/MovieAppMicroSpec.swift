@@ -15,9 +15,6 @@ class MovieAppMicro: QuickSpec {
                 expect(true).to(beTrue())
             }
             
-            it("has a Failing test!") {
-                expect(true).to(beFalse())
-            }
         }
     }
 }
