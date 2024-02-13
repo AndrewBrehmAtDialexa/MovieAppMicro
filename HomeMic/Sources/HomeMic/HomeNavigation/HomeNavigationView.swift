@@ -8,7 +8,7 @@ public struct HomeNavigationView: View {
     public init() {}
 
     var didAppear: ((Self) -> Void)?
-    
+
     public var body: some View {
         NavigationStack(path: $navPathWrapper.navPath) {
             HomeView()
@@ -18,9 +18,8 @@ public struct HomeNavigationView: View {
                         viewModel.createStaticIconView()
                     }
                 }
-                .onAppear { self.didAppear?(self) }
-                .padding(EdgeInsets(top: 1, leading: 2, bottom: 3, trailing: 4))
-                .id("mainNavStack")
         }
+        .onAppear { self.didAppear?(self) }
+        .id("mainNavStack")
     }
 }
