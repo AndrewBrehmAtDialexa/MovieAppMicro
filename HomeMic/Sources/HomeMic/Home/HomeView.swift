@@ -6,16 +6,21 @@ public struct HomeView: View {
 
     public init() {}
 
+    var didAppear: ((Self) -> Void)?
+
     public var body: some View {
         VStack {
             Image(systemName: "house")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("HOME VIEW!!!")
+                .font(.system(size: 34).bold())
+                .padding(.top, 10)
             Button("See a Cat!") {
                 viewModel.seeCatButtonTapped()
             }
         }
+        .onAppear { self.didAppear?(self) }
         .padding()
     }
 }
