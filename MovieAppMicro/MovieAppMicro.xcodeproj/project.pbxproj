@@ -72,6 +72,7 @@
 		55F57B662B75706C008D7AB0 /* MovieAppMicroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroUITests.swift; sourceTree = "<group>"; };
 		55F57B682B75706C008D7AB0 /* MovieAppMicroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		55F57B842B757352008D7AB0 /* MovieAppMicroSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroSpec.swift; sourceTree = "<group>"; };
+		C2508A5A2B7AE08A00E63E62 /* ApiService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ApiService; path = ../../ApiService; sourceTree = "<group>"; };
 		B25F22462B7BC7AF00BD0151 /* CommonUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CommonUI; path = ../../CommonUI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +126,7 @@
 		55F330382B76D46400AC80BF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C2508A5A2B7AE08A00E63E62 /* ApiService */,
 				B25F22462B7BC7AF00BD0151 /* CommonUI */,
 				55F330412B76D66200AC80BF /* Navigation */,
 			);
