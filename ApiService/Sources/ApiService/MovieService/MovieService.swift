@@ -6,7 +6,7 @@ public class MovieService {
     func getMovies(bySearchTerm search: String) async throws -> [Movie]? {
         
         return try await withCheckedThrowingContinuation { continuation in
-            if let url = Bundle.module.url(forResource: search, withExtension: "json") {
+            if let url = Bundle.module.url(forResource: search.lowercased(), withExtension: "json") {
                 do {
                     let data = try Data(contentsOf: url)
                     let movies = try decodeMovieSearch(fromData: data)
