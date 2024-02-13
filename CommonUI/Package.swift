@@ -4,25 +4,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "HomeMic",
+    name: "CommonUI",
     platforms: [.iOS(.v17)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "HomeMic",
-            targets: ["HomeMic"]),
-    ],
-    dependencies: [
-        .package(path: "Navigation"),
-        .package(path: "CommonUI"),
+            name: "CommonUI",
+            targets: ["CommonUI"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "HomeMic",
-            dependencies: ["Navigation", "CommonUI"]),
+            name: "CommonUI"),
         .testTarget(
-            name: "HomeMicTests",
-            dependencies: ["HomeMic"]),
-    ])
+            name: "CommonUITests",
+            dependencies: ["CommonUI"]),
+    ]
+)

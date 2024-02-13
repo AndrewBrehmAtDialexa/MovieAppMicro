@@ -5,4 +5,8 @@ class HomeNavigationViewModel {
     func createStaticIconView() -> StaticIconView {
         return StaticIconView()
     }
+    
+    func createStyleGuideView() -> StyleGuideView {
+        return StyleGuideView()
+    }
 }
