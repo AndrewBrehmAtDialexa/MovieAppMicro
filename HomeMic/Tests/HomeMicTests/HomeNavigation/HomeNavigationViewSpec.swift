@@ -71,6 +71,20 @@ class HomeNavigationViewSpec: QuickSpec {
                         expect(mockViewModel?.createStaticIconViewWasCalled).to(beTrue())
                     }
                 }
+                
+                describe("when the .navigationDestination changes to .styleGuide") {
+                    beforeEach {
+                        let _ = uut!.on(\.didAppear) { _ in
+                            uut?.navPathWrapper.appendToNavPath(HomeRouter.Destination.styleGuide)
+                        }
+
+                        ViewHosting.host(view: uut!)
+                    }
+
+                    it("calls .viewModel.createStyleGuideView()") {
+                        expect(mockViewModel?.createStyleGuideViewWasCalled).to(beTrue())
+                    }
+                }
             }
         }
     }

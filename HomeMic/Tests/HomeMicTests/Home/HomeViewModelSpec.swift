@@ -30,6 +30,22 @@ class HomeViewModelSpec: QuickSpec {
                     }
                 }
             }
+            
+            describe("when .seeStyleGuideButtonTapped()") {
+                beforeEach {
+                    uut?.seeStyleGuideButtonTapped()
+                }
+                
+                it("calls .homeRouter.navigate(to:)") {
+                    expect(mockHomeRouter?.navigateWasCalled).to(beTrue())
+                }
+                
+                describe("that call") {
+                    it("has a destinationValue of .styleGuide") {
+                        expect(mockHomeRouter?.destinationValue).to(equal(MockHomeRouter.Destination.styleGuide))
+                    }
+                }
+            }
         }
     }
 }

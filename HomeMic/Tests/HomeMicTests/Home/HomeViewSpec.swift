@@ -1,3 +1,4 @@
+@testable import CommonUI
 @testable import HomeMic
 
 import Nimble
@@ -58,15 +59,24 @@ class HomeViewSpec: QuickSpec {
                         text = try uut?.inspect().find(text: "HOME VIEW!!!")
                     }
 
-                    it("has a font .system(size: 34).bold()") {
-                        try expect(text?.attributes().font()).to(equal(.system(size: 34).bold()))
+                    describe("the .largeTitleTextStyle()") {
+                        it("has a .font(.largeTitle)") {
+                            try expect(text?.attributes().font()).to(equal(.largeTitle))
+                        }
+//                        it("has a .fontWeight of .heavy") {
+//                            try expect(text?.attributes().fontWeight()).to(equal(.heavy))
+//                        }
+//                        it("has a .foregroundStyle of Color.primaryDark") {
+//                            try expect(text?.attributes().foregroundColor()).to(equal(Color.primaryDark))
+//                        }
                     }
+
                     it("has padding .top of 10") {
                         try expect(text?.padding(.top)).to(equal(10))
                     }
                 }
 
-                // MARK: - Button
+                // MARK: - Cat Button
 
                 describe("the Button, 'See a Cat!'") {
                     var button: InspectableView<ViewType.Button>?
@@ -82,6 +92,26 @@ class HomeViewSpec: QuickSpec {
 
                         it("calls .viewModel.seeCatButtonTapped()") {
                             expect(mockHomeViewModel?.seeCatButtonTappedWasCalled).to(beTrue())
+                        }
+                    }
+                }
+
+                // MARK: - Styleguide Button
+
+                describe("the Button, 'See style guide'") {
+                    var button: InspectableView<ViewType.Button>?
+
+                    beforeEach {
+                        button = try uut?.inspect().find(button: "See style guide")
+                    }
+
+                    describe("when tapped") {
+                        beforeEach {
+                            try button?.tap()
+                        }
+
+                        it("calls .viewModel.seeStyleGuideButtonTapped()") {
+                            expect(mockHomeViewModel?.seeStyleGuideButtonTappedWasCalled).to(beTrue())
                         }
                     }
                 }
