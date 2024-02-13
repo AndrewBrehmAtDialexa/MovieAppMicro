@@ -1,5 +1,6 @@
 import Navigation
 import SwiftUI
+import CommonUI
 
 public struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
@@ -12,9 +13,13 @@ public struct HomeView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("HOME VIEW!!!")
+                .largeTitleTextStyle()
             Button("See a Cat!") {
                 viewModel.seeCatButtonTapped()
             }
+            Button("See style guide") {
+                viewModel.seeStyleGuideButtonTapped()
+            }.buttonStyle(GreenButton(isEnabled: true))
         }
         .padding()
     }
