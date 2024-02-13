@@ -18,6 +18,7 @@ public struct HomeNavigationView: View {
                         viewModel.createStaticIconView()
                     }
                 }
+                .id("homeView")
         }
         .onAppear { self.didAppear?(self) }
         .id("mainNavStack")

@@ -41,18 +41,12 @@ class HomeNavigationViewSpec: QuickSpec {
                 // MARK: - NavigationStack
 
                 describe("the NavigationStack") {
-                    var mainNavStack: InspectableView<ViewType.ClassifiedView>?
-
-                    beforeEach {
-                        mainNavStack = try uut?.inspect().find(viewWithId: "mainNavStack")
-                    }
-                    
                     describe("the Children") {
                         describe("HomeView") {
                             var homeView: InspectableView<ViewType.ClassifiedView>?
 
                             beforeEach {
-                                homeView = try mainNavStack?.inspect().find(viewWithId: "homeView")
+                                homeView = try uut?.inspect().find(viewWithId: "homeView")
                             }
 
                             it("is not nil") {

@@ -14,15 +14,15 @@ public class MockNavigationPathWrapper: NavigationPathWrapper {
         super.appendToNavPath(value)
     }
     
-    override public func navigateBack() {
-        navigateBackWasCalled = true
-        
-        super.navigateBack()
-    }
-    
-    override public func navigateToRoot() {
-        navigateToRootWasCalled = true
-        
-        super.navigateToRoot()
-    }
+//    override public func navigateBack() {
+//        navigateBackWasCalled = true
+//        
+//        super.navigateBack()
+//    }
+//    
+//    override public func navigateToRoot() {
+//        navigateToRootWasCalled = true
+//        
+//        super.navigateToRoot()
+//    }
 }
