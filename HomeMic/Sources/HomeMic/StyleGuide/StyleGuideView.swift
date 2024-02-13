@@ -30,6 +30,9 @@ public struct StyleGuideView: View {
             
             MovieCardView()
             UnderlineView()
+            
+            MovieDetailsView()
+            UnderlineView()
         }
     }
 }
@@ -185,6 +188,21 @@ struct MovieCardView: View {
                     MovieCard()
                 }
             }
+        }
+        .padding(.bottom)
+    }
+}
+
+// Movie Details Common
+struct MovieDetailsView: View {
+    var body: some View {
+        VStack {
+            Text("Movie Details Common Guide")
+                .subTitleTextStyle()
+                .padding()
+                .border(Color.secondaryDark)
+            
+            MovieDetails()
         }
         .padding(.bottom)
     }
