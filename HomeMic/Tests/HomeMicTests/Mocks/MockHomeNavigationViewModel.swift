@@ -7,12 +7,12 @@ class MockHomeNavigationViewModel: HomeNavigationViewModel {
     override func createStaticIconView() -> StaticIconView {
         createStaticIconViewWasCalled = true
         
-        return super.createStaticIconView()
+        return StaticIconView()
     }
     
     override func createStyleGuideView() -> StyleGuideView {
         createStyleGuideViewWasCalled = true
         
-        return super.createStyleGuideView()
+        return StyleGuideView()
     }
 }

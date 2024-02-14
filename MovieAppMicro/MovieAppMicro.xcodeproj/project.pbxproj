@@ -22,7 +22,7 @@
 		55F57B7D2B7572EE008D7AB0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 55F57B7C2B7572EE008D7AB0 /* Quick */; };
 		55F57B802B7572F9008D7AB0 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 55F57B7F2B7572F9008D7AB0 /* ViewInspector */; };
 		55F57B832B75731E008D7AB0 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 55F57B822B75731E008D7AB0 /* Nimble */; };
-		55F57B852B757352008D7AB0 /* MovieAppMicroSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F57B842B757352008D7AB0 /* MovieAppMicroSpec.swift */; };
+		55F57B852B757352008D7AB0 /* MovieAppMicroAppSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F57B842B757352008D7AB0 /* MovieAppMicroAppSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,9 +71,9 @@
 		55F57B622B75706C008D7AB0 /* MovieAppMicroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAppMicroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F57B662B75706C008D7AB0 /* MovieAppMicroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroUITests.swift; sourceTree = "<group>"; };
 		55F57B682B75706C008D7AB0 /* MovieAppMicroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		55F57B842B757352008D7AB0 /* MovieAppMicroSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroSpec.swift; sourceTree = "<group>"; };
-		C2508A5A2B7AE08A00E63E62 /* ApiService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ApiService; path = ../../ApiService; sourceTree = "<group>"; };
+		55F57B842B757352008D7AB0 /* MovieAppMicroAppSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppMicroAppSpec.swift; sourceTree = "<group>"; };
 		B25F22462B7BC7AF00BD0151 /* CommonUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CommonUI; path = ../../CommonUI; sourceTree = "<group>"; };
+		C2508A5A2B7AE08A00E63E62 /* ApiService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ApiService; path = ../../ApiService; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				55F57B5C2B75706C008D7AB0 /* MovieAppMicroTests.swift */,
-				55F57B842B757352008D7AB0 /* MovieAppMicroSpec.swift */,
+				55F57B842B757352008D7AB0 /* MovieAppMicroAppSpec.swift */,
 			);
 			path = MovieAppMicroTests;
 			sourceTree = "<group>";
@@ -350,7 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F57B852B757352008D7AB0 /* MovieAppMicroSpec.swift in Sources */,
+				55F57B852B757352008D7AB0 /* MovieAppMicroAppSpec.swift in Sources */,
 				55F57B5D2B75706C008D7AB0 /* MovieAppMicroTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

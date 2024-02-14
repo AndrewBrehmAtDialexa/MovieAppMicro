@@ -23,6 +23,18 @@ class HomeNavigationViewModelSpec: QuickSpec {
                     expect(result).to(beAKindOf(StaticIconView.self))
                 }
             }
+            
+            describe("when .createStyleGuideView()") {
+                var result: StyleGuideView?
+                
+                beforeEach {
+                    result = uut?.createStyleGuideView()
+                }
+                
+                it("returns a StyleGuideView") {
+                    expect(result).to(beAKindOf(StyleGuideView.self))
+                }
+            }
         }
     }
 }
