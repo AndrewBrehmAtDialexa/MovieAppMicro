@@ -20,4 +20,8 @@ public extension View {
     func bodyTextStyle() -> some View {
         modifier(BodyText())
     }
+    
+    func smallBodyTextStyle() -> some View {
+        modifier(SmallBodyText())
+    }
 }

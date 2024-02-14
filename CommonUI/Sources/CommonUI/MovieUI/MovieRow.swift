@@ -1,39 +1,55 @@
 import SwiftUI
+import ApiService
 
-//TODO: Pass movie object to display data in this view.
 public struct MovieRow: View {
-    public init() {}
+    let movie: Movie
+    
+    public init(movie: Movie) {
+        self.movie = movie
+    }
     
     public var body: some View {
         HStack {
-            Image(systemName: "film")
-                .resizable()
-                .frame(width: 100, height: 100)
-                .foregroundStyle(Color.secondaryLight)
-                .padding(.horizontal)
+            AsyncImage(url: URL(string: movie.posterUrl)) { phase in
+                if let image = phase.image {
+                    image
+                        .resizable()
+                        .frame(width: 80, height: 100)
+                        .cornerRadius(4)
+                } else if phase.error != nil {
+                    Image(systemName: "film")
+                        .resizable()
+                        .frame(width: 80, height: 100)
+                        .foregroundStyle(Color.secondaryLight)
+                        .cornerRadius(4)
+                } else {
+                    ProgressView()
+                }
+            }
+            .padding(10)
             
             VStack(alignment: .leading) {
-                Text("Movie Title")
-                    .smallTitleTextStyle()
-                Text("Movie year : 2024")
-                    .bodyTextStyle()
-                Text("Movie type : movie")
-                    .bodyTextStyle()
+                Text(movie.title)
+                    .subTitleTextStyle()
+                    .frame(maxWidth: .infinity)
+                    .lineLimit(1)
+                
+                Text("Year : \(movie.year)")
+                    .smallBodyTextStyle()
+                    .frame(maxWidth: .infinity)
+                    .lineLimit(1)
+                Text("Type : \(movie.type)")
+                    .smallBodyTextStyle()
+                    .frame(maxWidth: .infinity)
+                    .lineLimit(1)
             }
-            .frame(minWidth: 150)
-            .padding(.vertical)
-            
-            Spacer()
+            .frame(maxWidth: .infinity)
+            .padding()
         }
         .frame(maxWidth: .infinity)
         .background(
             RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.secondaryLight.opacity(0.4), lineWidth: 1)
         )
-        .padding()
     }
-}
-
-#Preview {
-    MovieRow()
 }

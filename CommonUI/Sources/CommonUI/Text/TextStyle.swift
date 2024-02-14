@@ -50,3 +50,12 @@ public struct BodyText: ViewModifier {
     }
 }
 
+public struct SmallBodyText: ViewModifier {
+    public init() {}
+    public func body(content: Content) -> some View {
+        content
+            .font(.callout)
+            .fontWeight(.regular)
+            .foregroundStyle(Color.primaryDark)
+    }
+}

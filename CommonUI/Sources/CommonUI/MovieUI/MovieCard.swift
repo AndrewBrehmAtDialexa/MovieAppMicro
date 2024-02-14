@@ -1,8 +1,11 @@
 import SwiftUI
+import ApiService
 
-//TODO: Pass movie object to display data in this view.
 public struct MovieCard: View {
-    public init() {}
+    let movie: Movie
+    public init(movie: Movie) {
+        self.movie = movie
+    }
     
     public var body: some View {
         VStack {
@@ -11,7 +14,7 @@ public struct MovieCard: View {
                 .frame(width: 120, height: 140)
                 .foregroundStyle(Color.secondaryLight)
             
-            Text("Movie Title")
+            Text(movie.title)
                 .bodyTextStyle()
                 .frame(maxHeight: .infinity)
         }
@@ -21,8 +24,4 @@ public struct MovieCard: View {
                 .stroke(Color.secondaryLight.opacity(0.4), lineWidth: 1)
         )
     }
-}
-
-#Preview {
-    MovieCard()
 }
