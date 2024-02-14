@@ -9,19 +9,23 @@ public struct MovieCard: View {
     
     public var body: some View {
         VStack {
-            Image(systemName: "film")
-                .resizable()
-                .frame(width: 120, height: 140)
-                .foregroundStyle(Color.secondaryLight)
-            
-            Text(movie.title)
-                .bodyTextStyle()
-                .frame(maxHeight: .infinity)
+            AsyncImage(url: URL(string: movie.posterUrl)) { phase in
+                if let image = phase.image {
+                    image
+                        .resizable()
+                        .frame(width: 120, height: 180)
+                        .cornerRadius(10)
+                } else if phase.error != nil {
+                    Image(systemName: "film")
+                        .resizable()
+                        .frame(width: 120, height: 180)
+                        .foregroundStyle(Color.secondaryLight)
+                        .cornerRadius(10)
+                } else {
+                    ProgressView()
+                }
+            }
+            .padding(10)
         }
-        .frame(width: 120, height: 180)
-        .background(
-            RoundedRectangle(cornerRadius: 8)
-                .stroke(Color.secondaryLight.opacity(0.4), lineWidth: 1)
-        )
     }
 }
