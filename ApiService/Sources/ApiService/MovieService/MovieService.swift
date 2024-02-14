@@ -2,9 +2,13 @@ import Combine
 import Foundation
 
 public class MovieService {
+
     private var cancellables: Set<AnyCancellable> = []
+    public init() {}
+    public static let shared: MovieService = .init()
+
     
-    func getMovies(bySearchTerm search: String) async throws -> [Movie]? {
+    public func getMovies(bySearchTerm search: String) async throws -> [Movie]? {
         
         return try await withCheckedThrowingContinuation { continuation in
             if let url = Bundle.module.url(forResource: search.lowercased(), withExtension: "json") {

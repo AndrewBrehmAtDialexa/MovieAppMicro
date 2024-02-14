@@ -2,22 +2,22 @@
 import Nimble
 import Quick
 
-class MovieAppMicro: QuickSpec {
+class MovieAppMicroAppSpec: QuickSpec {
     override class func spec() {
-        describe("MovieAppMicro") {
-            var uut: MovieAppMicro?
+        describe("MovieAppMicroApp") {
+            var uut: MovieAppMicroApp?
             
             beforeEach {
-                uut = MovieAppMicro()
+                uut = MovieAppMicroApp()
             }
             
             it("has a Passing test!") {
                 expect(true).to(beTrue())
             }
             
-            it("has a Failing test!") {
-                expect(true).to(beFalse())
-            }
+//            it("has a Failing test!") {
+//                expect(true).to(beFalse())
+//            }
         }
     }
 }

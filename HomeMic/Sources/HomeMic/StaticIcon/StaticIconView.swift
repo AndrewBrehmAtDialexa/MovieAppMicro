@@ -5,6 +5,8 @@ public struct StaticIconView: View {
 
     public init() {}
 
+    var didAppear: ((Self) -> Void)?
+    
     public var body: some View {
         VStack {
             Image(systemName: "cat")
@@ -12,5 +14,6 @@ public struct StaticIconView: View {
                 viewModel.popBackButtonTapped()
             }
         }
+        .onAppear { self.didAppear?(self) }
     }
 }

@@ -12,7 +12,14 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "ApiService",
-            targets: ["ApiService"]),
+            targets: ["ApiService"]
+        ),
+    ],
+    dependencies: [
+        // TESTING
+        .package(url: "https://github.com/Quick/Quick", from: "7.4.0"),
+        .package(url: "https://github.com/Quick/Nimble", from: "13.2.0"),
+        .package(url: "https://github.com/nalexn/ViewInspector", from: "0.9.10"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -22,12 +29,17 @@ let package = Package(
             resources: [
                 .copy("Resources/batman.json"),
                 .copy("Resources/superman.json"),
-                .copy("Resources/wonderwoman.json")
+                .copy("Resources/wonderwoman.json"),
             ]
         ),
         .testTarget(
             name: "ApiServiceTests",
-            dependencies: ["ApiService"
-        ]),
+            dependencies: [
+                "ApiService",
+                .product(name: "Quick", package: "Quick"),
+                .product(name: "Nimble", package: "Nimble"),
+                .product(name: "ViewInspector", package: "ViewInspector"),
+            ]
+        ),
     ]
 )
