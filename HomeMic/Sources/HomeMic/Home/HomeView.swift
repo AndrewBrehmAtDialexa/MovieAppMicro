@@ -7,6 +7,8 @@ public struct HomeView: View {
 
     public init() {}
 
+    var didAppear: ((Self) -> Void)?
+
     public var body: some View {
         VStack {
             Image(systemName: "house")
@@ -14,13 +16,16 @@ public struct HomeView: View {
                 .foregroundStyle(.tint)
             Text("HOME VIEW!!!")
                 .largeTitleTextStyle()
+                .padding(.top, 10)
             Button("See a Cat!") {
                 viewModel.seeCatButtonTapped()
             }
             Button("See style guide") {
                 viewModel.seeStyleGuideButtonTapped()
-            }.buttonStyle(GreenButton(isEnabled: true))
+            }
+            .buttonStyle(GreenButton(isEnabled: true))
         }
+        .onAppear { self.didAppear?(self) }
         .padding()
     }
 }
