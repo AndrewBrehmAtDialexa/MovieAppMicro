@@ -1,10 +1,11 @@
 import SwiftUI
+import ApiService
 
 public class SearchRouter: ObservableObject {
     public static let shared: SearchRouter = .init()
     
     public enum Destination: Codable, Hashable {
-        case movieDetails
+        case movieDetails(movie: Movie, isFavorite: Bool)
     }
     
     @Published public var navPathWrapper = NavigationPathWrapper()

@@ -13,20 +13,28 @@ public enum NetworkError: Codable, Error {
     case decodingError
 }
 
-struct MovieSearch: Codable {
-    var searchResult: [Movie]
+public struct MovieSearch: Codable {
+    public var searchResult: [Movie]
     
     enum CodingKeys: String, CodingKey {
         case searchResult = "Search"
     }
 }
 
-struct Movie: Codable {
-    var title: String
-    var year: String
-    var imdbId: String
-    var type: String
-    var posterUrl: String
+public struct Movie: Codable, Hashable {
+    public var title: String
+    public var year: String
+    public var imdbId: String
+    public var type: String
+    public var posterUrl: String
+    
+    public init(title: String, year: String, imdbId: String, type: String, posterUrl: String) {
+        self.title = title
+        self.year = year
+        self.imdbId = imdbId
+        self.type = type
+        self.posterUrl = posterUrl
+    }
     
     enum CodingKeys: String, CodingKey {
         case title = "Title"
@@ -38,10 +46,10 @@ struct Movie: Codable {
 }
 
 struct MovieError: Codable, Error {
-    var error: String = "There was a problem getting the movies. Sorry, try again."
-    var networkError: NetworkError?
+    public var error: String = "There was a problem getting the movies. Sorry, try again."
+    public var networkError: NetworkError?
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case error = "Error"
     }
 }
