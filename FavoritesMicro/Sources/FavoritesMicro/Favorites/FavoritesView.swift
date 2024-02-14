@@ -1,4 +1,5 @@
 import SwiftUI
+import CommonUI
 
 public struct FavoritesView: View {
     @ObservedObject var viewModel = FavoritesViewModel()
@@ -6,12 +7,23 @@ public struct FavoritesView: View {
     public init() {}
 
     public var body: some View {
-        VStack {
-            Image(systemName: "heart")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("FAVORITES VIEW!!!")
+        NavigationStack {
+            VStack {
+                if viewModel.favoritesList.isEmpty {
+                    Text("Oops, looks like you have no favorites yet.")
+                } else {
+                    ForEach(viewModel.favoritesList, id: \.imdbId) { movie in
+                        MovieRow(movie: movie)
+                    }
+                }
+                Spacer()
+            }
+            .padding()
+            .navigationTitle("Favorites")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .padding()
+        .onAppear {
+            print(viewModel.favoritesList.count)
+        }
     }
 }

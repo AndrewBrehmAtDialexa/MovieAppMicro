@@ -1,9 +1,10 @@
 import SwiftUI
 import ApiService
+import UserData
 
 public struct MovieDetails: View {
     let movie: Movie
-    let isFavorite: Bool
+    @State private var isFavorite: Bool
     
     public init(movie: Movie, isFavorite: Bool) {
         self.movie = movie
@@ -21,8 +22,12 @@ public struct MovieDetails: View {
                     .frame(width: 30, height: 30)
                     .foregroundStyle(Color.red)
                     .onTapGesture {
-                        //TODO: Work on passing isFavorite here...
-                        print("⚠️ Update Favorite Data Here....Or should we do it outside of this view....")
+                        if isFavorite {
+                            UserData.shared.favoriteMovies.removeAll(where: { $0.imdbId == self.movie.imdbId })
+                        } else {
+                            UserData.shared.favoriteMovies.append(self.movie)
+                        }
+                        isFavorite = !isFavorite // toggle favorite button
                     }
             }
             .padding()

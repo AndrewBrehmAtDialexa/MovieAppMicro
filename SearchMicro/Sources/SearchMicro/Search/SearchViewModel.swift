@@ -3,6 +3,7 @@ import Navigation
 import ApiService
 import Combine
 import Foundation
+import UserData
 
 //MARK: - Screen State Enum --> This could move to utilities micro app
 enum ScreenStateType {
@@ -51,7 +52,7 @@ public class SearchViewModel: ObservableObject {
             }.store(in: &subscriptions)
     }
     
-    func goToMovieDetails(movie: Movie, isFavorite: Bool) {
-        searchRouter.navigate(to: .movieDetails(movie: movie, isFavorite: isFavorite))
+    func goToMovieDetails(movie: Movie) {
+        searchRouter.navigate(to: .movieDetails(movie: movie, isFavorite: UserData.shared.favoriteMovies.contains(where: { $0.imdbId == movie.imdbId })))
     }
 }
