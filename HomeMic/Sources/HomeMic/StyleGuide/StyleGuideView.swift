@@ -1,5 +1,6 @@
 import SwiftUI
 import CommonUI
+import ApiService
 
 public struct StyleGuideView: View {
     @State private var searchText: String = ""
@@ -125,6 +126,8 @@ struct TextGuideView: View {
                 .subTitleTextStyle()
             Text(".bodyTextStyle()")
                 .bodyTextStyle()
+            Text(".smallBodyTextStyle()")
+                .smallBodyTextStyle()
         }
         .padding(.bottom)
     }
@@ -156,6 +159,14 @@ struct SearchBarGuideView: View {
 
 // Movie Row
 struct MovieRowView: View {
+    let mockMovie = Movie(
+        title: "Movie Title",
+        year: "0000",
+        imdbId: "12345",
+        type: "movie",
+        posterUrl: "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    )
+    
     var body: some View {
         VStack {
             Text("Movie Row Guide")
@@ -163,7 +174,7 @@ struct MovieRowView: View {
                 .padding()
                 .border(Color.secondaryDark)
             
-            MovieRow()
+            MovieRow(movie: mockMovie)
         }
         .padding(.bottom)
     }
@@ -171,6 +182,14 @@ struct MovieRowView: View {
 
 // Movie Card
 struct MovieCardView: View {
+    let mockMovie = Movie(
+        title: "Movie Title",
+        year: "0000",
+        imdbId: "12345",
+        type: "movie",
+        posterUrl: "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    )
+    
     var body: some View {
         VStack {
             Text("Movie Card Guide")
@@ -180,12 +199,15 @@ struct MovieCardView: View {
             
             ScrollView(.horizontal) {
                 HStack {
-                    MovieCard()
-                    MovieCard()
-                    MovieCard()
-                    MovieCard()
-                    MovieCard()
-                    MovieCard()
+                    MovieCard(movie: mockMovie)
+                    MovieCard(movie: mockMovie)
+                    MovieCard(movie: mockMovie)
+                    MovieCard(movie: mockMovie)
+                    MovieCard(movie: mockMovie)
+                    MovieCard(movie: mockMovie)
+                    MovieCard(movie: mockMovie)
+                    MovieCard(movie: mockMovie)
+                    MovieCard(movie: mockMovie)
                 }
             }
         }
@@ -195,6 +217,14 @@ struct MovieCardView: View {
 
 // Movie Details Common
 struct MovieDetailsView: View {
+    let mockMovie = Movie(
+        title: "Movie Title",
+        year: "0000",
+        imdbId: "12345",
+        type: "movie",
+        posterUrl: "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    )
+    
     var body: some View {
         VStack {
             Text("Movie Details Common Guide")
@@ -202,7 +232,7 @@ struct MovieDetailsView: View {
                 .padding()
                 .border(Color.secondaryDark)
             
-            MovieDetails()
+            MovieDetails(movie: mockMovie, isFavorite: true)
         }
         .padding(.bottom)
     }

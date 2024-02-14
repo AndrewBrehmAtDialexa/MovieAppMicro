@@ -14,8 +14,8 @@ public struct SearchNavigationView: View {
             SearchView()
                 .navigationDestination(for: SearchRouter.Destination.self) { destination in
                     switch destination {
-                    case .movieDetails:
-                        viewModel.createMovieDetailsView()
+                    case .movieDetails(let movie, let isFavorite):
+                        viewModel.createMovieDetailsView(movie: movie, isFavorite: isFavorite)
                     }
                 }
                 .onAppear {

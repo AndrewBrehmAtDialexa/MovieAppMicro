@@ -12,11 +12,15 @@ let package = Package(
             name: "CommonUI",
             targets: ["CommonUI"]),
     ],
+    dependencies: [
+        .package(path: "ApiService"),
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "CommonUI"),
+            name: "CommonUI",
+            dependencies: ["ApiService"]),
         .testTarget(
             name: "CommonUITests",
             dependencies: ["CommonUI"]),
