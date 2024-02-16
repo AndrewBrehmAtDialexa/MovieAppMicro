@@ -2,7 +2,7 @@ import SwiftUI
 import CommonUI
 
 public struct SearchView: View {
-    @ObservedObject var viewModel = SearchViewModel()
+    @StateObject var viewModel = SearchViewModel()
     
     public init() {}
     
