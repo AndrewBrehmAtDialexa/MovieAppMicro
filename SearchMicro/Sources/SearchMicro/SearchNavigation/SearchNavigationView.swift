@@ -17,7 +17,7 @@ public struct SearchNavigationView: View {
         NavigationStack(path: $navPathWrapper.navPath) {
             if isFavoriteView {
                 FavoritesView()
-                    .navigationDestination(for: SearchRouter.Destination.self) { destination in
+                    .navigationDestination(for: FavoriteRouter.Destination.self) { destination in
                         switch destination {
                         case .movieDetails(let movie, let isFavorite):
                             viewModel.createMovieDetailsView(movie: movie, isFavorite: isFavorite)
