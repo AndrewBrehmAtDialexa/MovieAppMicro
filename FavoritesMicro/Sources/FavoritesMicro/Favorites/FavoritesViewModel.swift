@@ -7,12 +7,13 @@ import Navigation
 
 public class FavoritesViewModel: ObservableObject {
     
-    @Published var favoriteMovies = UserData.shared
-    private let favoriteRouter = SearchRouter.shared
+    @Published var userData = UserData.shared
+    private let favoriteRouter = FavoriteRouter.shared
+
     private var cancellables: Set<AnyCancellable> = []
 
     init() {
-        favoriteMovies.$favoriteMovies
+        userData.$favoriteMovies
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 guard let self = self else { return }
@@ -21,11 +22,11 @@ public class FavoritesViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     var favoriteCount: Int {
-        favoriteMovies.favoriteMovies.count
+        userData.favoriteMovies.count
     }
     
     var favorites : [Movie] {
-        favoriteMovies.favoriteMovies
+        userData.favoriteMovies
     }
     
     func goToMovieDetails(movie: Movie) {
