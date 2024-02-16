@@ -8,7 +8,7 @@ import Navigation
 public class FavoritesViewModel: ObservableObject {
     
     @Published var favoriteMovies = UserData.shared
-    private let favoriteRouter = FavoriteRouter.shared
+    private let favoriteRouter = SearchRouter.shared
     private var cancellables: Set<AnyCancellable> = []
 
     init() {
