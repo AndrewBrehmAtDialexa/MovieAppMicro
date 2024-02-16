@@ -36,7 +36,7 @@ public struct SearchView: View {
                                 .id(movie.imdbId)
                                 .onTapGesture {
                                     //TODO: Work on passing isFavorite here...
-                                    viewModel.goToMovieDetails(movie: movie, isFavorite: false)
+                                    viewModel.goToMovieDetails(movie: movie)
                                 }
                         }
                     }

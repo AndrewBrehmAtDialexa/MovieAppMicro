@@ -56,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C9B27F12B7D267100CB238C /* UserData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = UserData; path = ../../UserData; sourceTree = "<group>"; };
 		55F330362B76D42E00AC80BF /* TabMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TabMicro; path = ../../TabMicro; sourceTree = "<group>"; };
 		55F3303B2B76D4B000AC80BF /* HomeMic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeMic; path = ../../HomeMic; sourceTree = "<group>"; };
 		55F3303C2B76D4B000AC80BF /* FavoritesMicro */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FavoritesMicro; path = ../../FavoritesMicro; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 				C2508A5A2B7AE08A00E63E62 /* ApiService */,
 				B25F22462B7BC7AF00BD0151 /* CommonUI */,
 				55F330412B76D66200AC80BF /* Navigation */,
+				4C9B27F12B7D267100CB238C /* UserData */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";

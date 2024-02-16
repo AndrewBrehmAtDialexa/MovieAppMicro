@@ -18,7 +18,7 @@ public struct BottomTabView: View {
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }
-            FavoritesView()
+            FavoriteNavigationView()
                 .tabItem {
                     Label("Favs", systemImage: "heart")
                 }
