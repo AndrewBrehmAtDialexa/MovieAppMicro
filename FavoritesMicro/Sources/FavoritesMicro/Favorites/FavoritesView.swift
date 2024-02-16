@@ -8,15 +8,33 @@ public struct FavoritesView: View {
 
     public var body: some View {
         VStack {
+            HStack {
+                Image(systemName: "heart")
+                    .imageScale(.large)
+                    .foregroundStyle(Color.primaryDark)
+                    .fontWeight(.bold)
+                
+                Text("Favorites")
+                    .largeTitleTextStyle()
+            }
             if viewModel.favoriteCount <= 0 {
                 Text("Oops, looks like you have no favorites yet.")
             } else {
-                ForEach(viewModel.favorites, id: \.imdbId) { movie in
+                List {
+                    ForEach(viewModel.favorites, id: \.self) { movie in
                         MovieRow(movie: movie)
                             .listRowSeparatorTint(Color.white)
                             .listRowBackground(Color.white)
                             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 0))
+                            .id(movie.imdbId)
+                            .onTapGesture {
+                                viewModel.goToMovieDetails(movie: movie)
+                            }
+                        
+                    }
                 }
+                .listStyle(.plain)
+                .accessibilityIdentifier("favoriteListView")
             }
             Spacer()
         }

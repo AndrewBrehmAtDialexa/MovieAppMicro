@@ -3,11 +3,12 @@ import SwiftUI
 import ApiService
 import UserData
 import Combine
+import Navigation
 
 public class FavoritesViewModel: ObservableObject {
     
     @Published var favoriteMovies = UserData.shared
-    
+    private let favoriteRouter = FavoriteRouter.shared
     private var cancellables: Set<AnyCancellable> = []
 
     init() {
@@ -27,4 +28,7 @@ public class FavoritesViewModel: ObservableObject {
         favoriteMovies.favoriteMovies
     }
     
+    func goToMovieDetails(movie: Movie) {
+        favoriteRouter.navigate(to: .movieDetails(movie: movie, isFavorite: UserData.shared.favoriteMovies.contains(where: { $0.imdbId == movie.imdbId })))
+    }
 }
