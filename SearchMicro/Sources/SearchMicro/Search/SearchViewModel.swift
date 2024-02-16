@@ -53,6 +53,6 @@ public class SearchViewModel: ObservableObject {
     }
     
     func goToMovieDetails(movie: Movie) {
-        searchRouter.navigate(to: .movieDetails(movie: movie, isFavorite: UserData.shared.favoriteMovies.contains(where: { $0.imdbId == movie.imdbId })))
+        searchRouter.navigate(to: .movieDetails(movie: movie))
     }
 }

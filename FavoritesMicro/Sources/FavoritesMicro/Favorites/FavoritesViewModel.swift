@@ -29,6 +29,6 @@ public class FavoritesViewModel: ObservableObject {
     }
     
     func goToMovieDetails(movie: Movie) {
-        favoriteRouter.navigate(to: .movieDetails(movie: movie, isFavorite: UserData.shared.favoriteMovies.contains(where: { $0.imdbId == movie.imdbId })))
+        favoriteRouter.navigate(to: .movieDetails(movie: movie))
     }
 }

@@ -2,13 +2,13 @@ import SwiftUI
 import ApiService
 import UserData
 
-public struct MovieDetails: View {
-    let movie: Movie
-    @State private var isFavorite: Bool
+public struct MovieDetailsView: View {
+    @ObservedObject private var viewModel: MovieDetailsViewModel
+    private let movie: Movie
     
-    public init(movie: Movie, isFavorite: Bool) {
+    public init(movie: Movie) {
         self.movie = movie
-        self.isFavorite = isFavorite
+        self.viewModel = MovieDetailsViewModel(movie: movie)
     }
     
     public var body: some View {
@@ -17,25 +17,20 @@ public struct MovieDetails: View {
                 Spacer()
                     .frame(maxWidth: .infinity)
                 
-                Image(systemName: isFavorite ? "heart.fill" : "heart" )
+                Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart" )
                     .resizable()
                     .frame(width: 30, height: 30)
                     .foregroundStyle(Color.red)
                     .onTapGesture {
-                        if isFavorite {
-                            UserData.shared.favoriteMovies.removeAll(where: { $0.imdbId == self.movie.imdbId })
-                        } else {
-                            UserData.shared.favoriteMovies.append(self.movie)
-                        }
-                        isFavorite = !isFavorite // toggle favorite button
+                        viewModel.favoriteIconTapped()
                     }
             }
             .padding()
             
-            Text(movie.title)
+            Text(viewModel.movie.title)
                 .titleTextStyle()
             
-            AsyncImage(url: URL(string: movie.posterUrl)) { phase in
+            AsyncImage(url: URL(string: viewModel.movie.posterUrl)) { phase in
                 if let image = phase.image {
                     image
                         .resizable()
@@ -57,17 +52,15 @@ public struct MovieDetails: View {
                 Text("Year : ")
                     .subTitleTextStyle()
                 
-                Text("\(movie.year)")
+                Text("\(viewModel.movie.year)")
                     .bodyTextStyle()
             }
-            
-            
             
             HStack {
                 Text("Type : ")
                     .subTitleTextStyle()
                 
-                Text("\(movie.type)")
+                Text("\(viewModel.movie.type)")
                     .bodyTextStyle()
             }
             
@@ -75,11 +68,15 @@ public struct MovieDetails: View {
                 Text("ID : ")
                     .subTitleTextStyle()
                 
-                Text("\(movie.imdbId)")
+                Text("\(viewModel.movie.imdbId)")
                     .bodyTextStyle()
             }
             
             Spacer()
-        } .padding()
+        }
+        .padding()
+        .onAppear {
+            viewModel.fetchFavorite()
+        }
     }
 }
