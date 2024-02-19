@@ -16,14 +16,15 @@ let package = Package(
         .package(path: "Navigation"),
         .package(path: "ApiService"),
         .package(path: "UserData"),
-        .package(path: "CommonUI")
+        .package(path: "CommonUI"),
+        .package(path: "DataModels"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "FavoritesMicro",
-            dependencies: ["Navigation", "ApiService", "UserData", "CommonUI"]),
+            dependencies: ["Navigation", "ApiService", "UserData", "CommonUI", "DataModels"]),
         .testTarget(
             name: "FavoritesMicroTests",
             dependencies: ["FavoritesMicro"]),
