@@ -12,7 +12,6 @@ public class MovieDetailsViewModel: ObservableObject {
     
     init(movie: Movie) {
         self.movie = movie
-        self.fetchFavorite()
     }
     
     func fetchFavorite() {
