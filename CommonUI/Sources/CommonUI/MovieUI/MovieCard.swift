@@ -1,5 +1,5 @@
 import SwiftUI
-import ApiService
+import DataModels
 
 public struct MovieCard: View {
     let movie: Movie

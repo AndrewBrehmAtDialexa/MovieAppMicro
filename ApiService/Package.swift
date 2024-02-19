@@ -14,6 +14,10 @@ let package = Package(
             name: "ApiService",
             targets: ["ApiService"]
         ),
+        .library(
+            name: "DataModels",
+            targets: ["DataModels"]
+        )
     ],
     dependencies: [
         // TESTING
@@ -26,11 +30,15 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "ApiService",
+            dependencies: ["DataModels"],
             resources: [
                 .copy("Resources/batman.json"),
                 .copy("Resources/superman.json"),
                 .copy("Resources/wonderwoman.json"),
             ]
+        ),
+        .target(
+            name: "DataModels"
         ),
         .testTarget(
             name: "ApiServiceTests",

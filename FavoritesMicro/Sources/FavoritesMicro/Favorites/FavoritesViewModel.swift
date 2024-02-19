@@ -1,6 +1,6 @@
 import Foundation
 import SwiftUI
-import ApiService
+import DataModels
 import UserData
 import Combine
 import Navigation
