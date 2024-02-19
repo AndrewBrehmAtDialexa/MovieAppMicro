@@ -14,12 +14,12 @@ public struct MovieRow: View {
                 if let image = phase.image {
                     image
                         .resizable()
-                        .frame(width: 80, height: 100)
+                        .aspectRatio(contentMode: .fit)
                         .cornerRadius(4)
                 } else if phase.error != nil {
                     Image(systemName: "film")
                         .resizable()
-                        .frame(width: 80, height: 100)
+                        .aspectRatio(contentMode: .fit)
                         .foregroundStyle(Color.secondaryLight)
                         .cornerRadius(4)
                 } else {

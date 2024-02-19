@@ -23,10 +23,6 @@ public class HomeViewModel: ObservableObject {
         }
     }
     
-    func seeCatButtonTapped() {
-        homeRouter.navigate(to: .staticIcon)
-    }
-    
     func seeStyleGuideButtonTapped() {
         homeRouter.navigate(to: .styleGuide)
     }

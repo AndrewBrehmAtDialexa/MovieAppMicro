@@ -44,7 +44,7 @@ public struct SearchView: View {
                     .accessibilityIdentifier("movieListView")
                 
                 case .showEmpty:
-                    Text("No movies founds ! ")
+                    Text("No movies found.")
                         .subTitleTextStyle()
                     
                 case .loading:

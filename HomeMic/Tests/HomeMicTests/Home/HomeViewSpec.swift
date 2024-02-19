@@ -74,26 +74,6 @@ class HomeViewSpec: QuickSpec {
                     }
                 }
 
-                // MARK: - Cat Button
-
-                describe("the Button, 'See a Cat!'") {
-                    var button: InspectableView<ViewType.Button>?
-
-                    beforeEach {
-                        button = try uut?.inspect().find(button: "See a Cat!")
-                    }
-
-                    describe("when tapped") {
-                        beforeEach {
-                            try button?.tap()
-                        }
-
-                        it("calls .viewModel.seeCatButtonTapped()") {
-                            expect(mockHomeViewModel?.seeCatButtonTappedWasCalled).to(beTrue())
-                        }
-                    }
-                }
-
                 // MARK: - Styleguide Button
 
                 describe("the Button, 'See style guide'") {
