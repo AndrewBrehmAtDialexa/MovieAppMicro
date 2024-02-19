@@ -21,8 +21,8 @@ public struct FavoriteNavigationView: View {
             FavoritesView()
                 .navigationDestination(for: FavoriteRouter.Destination.self) { destination in
                     switch destination {
-                    case .movieDetails(let movie, let isFavorite):
-                        viewModel.createMovieDetailsView(movie: movie, isFavorite: isFavorite)
+                    case .movieDetails(let movie):
+                        viewModel.createMovieDetailsView(movie: movie)
                     }
                 }
                 .onAppear {

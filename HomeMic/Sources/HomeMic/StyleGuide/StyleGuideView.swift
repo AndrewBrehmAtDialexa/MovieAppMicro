@@ -232,7 +232,8 @@ struct MovieDetailsView: View {
                 .padding()
                 .border(Color.secondaryDark)
             
-            MovieDetails(movie: mockMovie, isFavorite: true)
+            //TODO : Fix it ! Not sure why it is not working.
+            // MovieDetailsView(movie: mockMovie)
         }
         .padding(.bottom)
     }

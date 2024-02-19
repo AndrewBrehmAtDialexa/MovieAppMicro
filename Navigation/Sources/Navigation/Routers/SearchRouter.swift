@@ -5,7 +5,7 @@ public class SearchRouter: ObservableObject {
     public static let shared: SearchRouter = .init()
     
     public enum Destination: Codable, Hashable {
-        case movieDetails(movie: Movie, isFavorite: Bool)
+        case movieDetails(movie: Movie)
     }
     
     @Published public var navPathWrapper = NavigationPathWrapper()
