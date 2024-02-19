@@ -3,7 +3,7 @@
 import Nimble
 import Quick
 
-class HomeViewModelSpec: QuickSpec {
+class HomeViewModelSpec: AsyncSpec {
     override class func spec() {
         describe("HomeViewModel") {
             var uut: HomeViewModel?
