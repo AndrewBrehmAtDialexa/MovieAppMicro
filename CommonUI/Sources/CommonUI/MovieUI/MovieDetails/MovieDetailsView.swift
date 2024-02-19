@@ -4,10 +4,8 @@ import UserData
 
 public struct MovieDetailsView: View {
     @ObservedObject private var viewModel: MovieDetailsViewModel
-    private let movie: Movie
     
     public init(movie: Movie) {
-        self.movie = movie
         self.viewModel = MovieDetailsViewModel(movie: movie)
     }
     

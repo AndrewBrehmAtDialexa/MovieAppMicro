@@ -3,7 +3,6 @@ import Navigation
 import ApiService
 import Combine
 import Foundation
-import UserData
 
 //MARK: - Screen State Enum --> This could move to utilities micro app
 enum ScreenStateType {
