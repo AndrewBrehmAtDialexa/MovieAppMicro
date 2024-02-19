@@ -74,7 +74,7 @@ class BottomTabViewSpec: QuickSpec {
 
                     describe("the .tabItem") {
                         beforeEach {
-                            tabItem = try uut?.inspect().tabView().view(FavoritesView.self, 2).tabItem()
+                            tabItem = try uut?.inspect().tabView().view(FavoriteNavigationView.self, 2).tabItem()
                         }
 
                         it("has a title of 'Favs'") {

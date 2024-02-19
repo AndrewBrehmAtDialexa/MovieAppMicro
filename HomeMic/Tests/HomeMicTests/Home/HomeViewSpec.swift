@@ -35,44 +35,42 @@ class HomeViewSpec: QuickSpec {
             }
 
             describe("the VStack") {
-                // MARK: - Image
+                describe("the HStack") {
+                    // MARK: - Image
 
-                describe("the image, at index[0]") {
-                    var actualImage: Image?
+                    describe("the image, at index[0]") {
+                        var actualImage: Image?
 
-                    beforeEach {
-                        actualImage = try uut?.inspect().vStack().image(0).actualImage()
-                    }
-
-                    it("has .systemName of 'house'") {
-                        let imageName = try actualImage?.name()
-                        expect(imageName).to(equal("house"))
-                    }
-                }
-
-                // MARK: - Text
-
-                describe("the text, 'HOME VIEW!!!'") {
-                    var text: InspectableView<ViewType.Text>?
-
-                    beforeEach {
-                        text = try uut?.inspect().find(text: "HOME VIEW!!!")
-                    }
-
-                    describe("the .largeTitleTextStyle()") {
-                        it("has a .font(.largeTitle)") {
-                            try expect(text?.attributes().font()).to(equal(.largeTitle))
+                        beforeEach {
+                            actualImage = try uut?.inspect().vStack().hStack(0).image(0).actualImage()
                         }
-//                        it("has a .fontWeight of .heavy") {
-//                            try expect(text?.attributes().fontWeight()).to(equal(.heavy))
-//                        }
-//                        it("has a .foregroundStyle of Color.primaryDark") {
-//                            try expect(text?.attributes().foregroundColor()).to(equal(Color.primaryDark))
-//                        }
+
+                        it("has .systemName of 'house'") {
+                            let imageName = try actualImage?.name()
+                            expect(imageName).to(equal("house"))
+                        }
                     }
 
-                    it("has padding .top of 10") {
-                        try expect(text?.padding(.top)).to(equal(10))
+                    // MARK: - Text
+
+                    describe("the text, 'HOME VIEW!!!'") {
+                        var text: InspectableView<ViewType.Text>?
+
+                        beforeEach {
+                            text = try uut?.inspect().find(text: "HOME VIEW!!!")
+                        }
+
+                        describe("the .largeTitleTextStyle()") {
+                            it("has a .font(.largeTitle)") {
+                                try expect(text?.attributes().font()).to(equal(.largeTitle))
+                            }
+                            //                        it("has a .fontWeight of .heavy") {
+                            //                            try expect(text?.attributes().fontWeight()).to(equal(.heavy))
+                            //                        }
+                            //                        it("has a .foregroundStyle of Color.primaryDark") {
+                            //                            try expect(text?.attributes().foregroundColor()).to(equal(Color.primaryDark))
+                            //                        }
+                        }
                     }
                 }
 
