@@ -12,18 +12,6 @@ class HomeNavigationViewModelSpec: QuickSpec {
                 uut = HomeNavigationViewModel()
             }
             
-            describe("when .createStaticIconView()") {
-                var result: StaticIconView?
-                
-                beforeEach {
-                    result = uut?.createStaticIconView()
-                }
-                
-                it("returns a StaticIconView") {
-                    expect(result).to(beAKindOf(StaticIconView.self))
-                }
-            }
-            
             describe("when .createStyleGuideView()") {
                 var result: StyleGuideView?
                 

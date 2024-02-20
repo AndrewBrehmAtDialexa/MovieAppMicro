@@ -1,7 +1,7 @@
-import Navigation
-import SwiftUI
 import CommonUI
 import FeatureComponent
+import Navigation
+import SwiftUI
 
 public struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()

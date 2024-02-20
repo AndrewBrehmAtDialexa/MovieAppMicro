@@ -51,6 +51,7 @@ public struct MovieRow: View {
         .background(
             RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.secondaryLight.opacity(0.4), lineWidth: 1)
+                .background(Color.white)
         )
     }
 }

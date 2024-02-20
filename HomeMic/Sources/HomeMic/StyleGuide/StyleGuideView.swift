@@ -1,8 +1,8 @@
-import SwiftUI
 import CommonUI
 import DataModels
 import FeatureComponent
 import FeatureView
+import SwiftUI
 
 public struct StyleGuideView: View {
     @State private var searchText: String = ""
@@ -240,7 +240,7 @@ struct MovieDetailsDemoView: View {
 }
 
 // MARK: - Preview
+
 #Preview {
     StyleGuideView()
 }
-
