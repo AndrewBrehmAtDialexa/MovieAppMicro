@@ -1,5 +1,6 @@
 import SwiftUI
 import ApiService
+import CommonUI
 
 public struct MovieRow: View {
     let movie: Movie

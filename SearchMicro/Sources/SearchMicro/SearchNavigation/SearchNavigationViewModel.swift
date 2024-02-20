@@ -1,7 +1,8 @@
 import Foundation
-import CommonUI
+import FeatureView
 import ApiService
 import SwiftUI
+
 class SearchNavigationViewModel {
     // MARK: - View Builders
     
