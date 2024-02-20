@@ -1,7 +1,5 @@
-import Foundation
-import CommonUI
 import DataModels
-import SwiftUI
+import FeatureView
 
 class SearchNavigationViewModel {
     // MARK: - View Builders

@@ -1,5 +1,6 @@
-import SwiftUI
+import CommonUI
 import DataModels
+import SwiftUI
 
 public struct MovieRow: View {
     let movie: Movie
