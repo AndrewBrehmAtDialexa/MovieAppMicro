@@ -15,22 +15,6 @@ class HomeViewModelSpec: AsyncSpec {
                 uut?.homeRouter = mockHomeRouter!
             }
             
-            describe("when .seeCatButtonTapped()") {
-                beforeEach {
-                    uut?.seeCatButtonTapped()
-                }
-                
-                it("calls .homeRouter.navigate(to:)") {
-                    expect(mockHomeRouter?.navigateWasCalled).to(beTrue())
-                }
-                
-                describe("that call") {
-                    it("has a destinationValue of .staticIcon") {
-                        expect(mockHomeRouter?.destinationValue).to(equal(MockHomeRouter.Destination.staticIcon))
-                    }
-                }
-            }
-            
             describe("when .seeStyleGuideButtonTapped()") {
                 beforeEach {
                     uut?.seeStyleGuideButtonTapped()

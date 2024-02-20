@@ -23,11 +23,6 @@ public struct HomeView: View {
             }
             
             HStack {
-                Button("See a Cat!") {
-                    viewModel.seeCatButtonTapped()
-                }
-                .buttonStyle(LightGreenButton())
-                
                 Button("See style guide") {
                     viewModel.seeStyleGuideButtonTapped()
                 }

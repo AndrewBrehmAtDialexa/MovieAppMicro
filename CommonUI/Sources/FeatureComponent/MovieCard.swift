@@ -14,12 +14,12 @@ public struct MovieCard: View {
                 if let image = phase.image {
                     image
                         .resizable()
-                        .frame(width: 120, height: 180)
+                        .aspectRatio(contentMode: .fit)
                         .cornerRadius(10)
                 } else if phase.error != nil {
                     Image(systemName: "film")
                         .resizable()
-                        .frame(width: 120, height: 180)
+                        .aspectRatio(contentMode: .fit)
                         .foregroundStyle(Color.secondaryLight)
                         .cornerRadius(10)
                 } else {

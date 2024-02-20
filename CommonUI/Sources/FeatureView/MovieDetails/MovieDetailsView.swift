@@ -32,12 +32,12 @@ public struct MovieDetailsView: View {
                 if let image = phase.image {
                     image
                         .resizable()
-                        .frame(width: 180, height: 250)
+                        .aspectRatio(contentMode: .fit)
                         .cornerRadius(10)
                 } else if phase.error != nil {
                     Image(systemName: "film")
                         .resizable()
-                        .frame(width: 180, height: 250)
+                        .aspectRatio(contentMode: .fit)
                         .foregroundStyle(Color.secondaryLight)
                         .cornerRadius(10)
                 } else {
