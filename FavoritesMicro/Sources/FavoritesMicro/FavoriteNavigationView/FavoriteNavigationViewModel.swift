@@ -1,14 +1,5 @@
-//
-//  SwiftUIView.swift
-//  
-//
-//  Created by Hai Nguyen on 2/15/24.
-//
-
-import Foundation
-import CommonUI
 import DataModels
-import SwiftUI
+import FeatureView
 
 class FavoriteNavigationViewModel {
     // MARK: - View Builders

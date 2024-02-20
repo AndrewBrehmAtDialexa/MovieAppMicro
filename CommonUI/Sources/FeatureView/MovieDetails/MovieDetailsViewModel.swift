@@ -1,7 +1,7 @@
-import SwiftUI
-import UserData
 import Combine
 import DataModels
+import SwiftUI
+import UserData
 
 public class MovieDetailsViewModel: ObservableObject {
     private let userData = UserData.shared

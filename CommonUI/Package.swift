@@ -10,7 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "CommonUI",
-            targets: ["CommonUI"]),
+            targets: ["CommonUI", "FeatureComponent", "FeatureView"]),
     ],
     dependencies: [
         .package(path: "UserData"),
@@ -20,8 +20,16 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "CommonUI",
-            dependencies: ["UserData", "DataModels"]),
+            name: "CommonUI"
+        ),
+        .target(
+            name: "FeatureComponent",
+            dependencies: ["CommonUI", "DataModels"]
+        ),
+        .target(
+            name: "FeatureView",
+            dependencies: ["CommonUI", "DataModels", "UserData"]
+        ),
         .testTarget(
             name: "CommonUITests",
             dependencies: ["CommonUI"]),
