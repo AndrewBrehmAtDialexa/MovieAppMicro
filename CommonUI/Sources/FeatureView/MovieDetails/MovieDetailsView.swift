@@ -4,13 +4,8 @@ import SwiftUI
 
 public struct MovieDetailsView: View {
     @ObservedObject private var viewModel: MovieDetailsViewModel
-    let url: URL
-    public init?(movie: Movie) {
+    public init(movie: Movie) {
         self.viewModel = MovieDetailsViewModel(movie: movie)
-        guard let movieURL = URL(string: movie.posterUrl) else {
-            return nil
-        }
-        self.url = movieURL
     }
     
     public var body: some View {
@@ -32,7 +27,7 @@ public struct MovieDetailsView: View {
             Text(viewModel.movie.title)
                 .titleTextStyle()
             
-            AsyncImage(url: url) { phase in
+            AsyncImageViewBuilder(urlString: viewModel.movie.posterUrl) { phase in
                 if let image = phase.image {
                     image
                         .resizable()
@@ -79,16 +74,6 @@ public struct MovieDetailsView: View {
         .padding()
         .onAppear {
             viewModel.fetchFavorite()
-        }
-        .onAppear {
-            // Load and cache the image using URLSession
-            let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
-            URLSession.shared.dataTask(with: request) { data, response, _ in
-                if let data = data, let response = response {
-                    let cachedResponse = CachedURLResponse(response: response, data: data)
-                    URLCache.shared.storeCachedResponse(cachedResponse, for: request)
-                }
-            }.resume()
         }
     }
 }

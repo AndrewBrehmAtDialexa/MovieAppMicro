@@ -4,18 +4,13 @@ import SwiftUI
 
 public struct MovieRow: View {
     let movie: Movie
-    let url: URL
-    public init?(movie: Movie) {
+    public init(movie: Movie) {
         self.movie = movie
-        guard let movieURL = URL(string: movie.posterUrl) else {
-            return nil
-        }
-        self.url = movieURL
     }
     
     public var body: some View {
         HStack {
-            AsyncImage(url: URL(string: movie.posterUrl)) { phase in
+            AsyncImageViewBuilder(urlString:movie.posterUrl) { phase in
                 if let image = phase.image {
                     image
                         .resizable()
@@ -56,15 +51,5 @@ public struct MovieRow: View {
             RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.secondaryLight.opacity(0.4), lineWidth: 1)
         )
-        .onAppear {
-            // Load and cache the image using URLSession
-            let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
-            URLSession.shared.dataTask(with: request) { data, response, _ in
-                if let data = data, let response = response {
-                    let cachedResponse = CachedURLResponse(response: response, data: data)
-                    URLCache.shared.storeCachedResponse(cachedResponse, for: request)
-                }
-            }.resume()
-        }
     }
 }
