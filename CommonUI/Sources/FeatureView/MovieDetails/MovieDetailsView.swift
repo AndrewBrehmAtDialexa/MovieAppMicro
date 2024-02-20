@@ -1,6 +1,6 @@
+import CommonUI
+import DataModels
 import SwiftUI
-import ApiService
-import UserData
 
 public struct MovieDetailsView: View {
     @ObservedObject private var viewModel: MovieDetailsViewModel

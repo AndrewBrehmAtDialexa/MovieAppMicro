@@ -1,7 +1,9 @@
 import ApiService
 import Foundation
 import Navigation
+import DataModels
 
+@MainActor
 public class HomeViewModel: ObservableObject {
     @Published var mockTopMovies: [Movie] = []
     @Published var mockRecentMovies: [Movie] = []

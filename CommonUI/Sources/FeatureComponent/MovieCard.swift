@@ -1,5 +1,6 @@
+import CommonUI
+import DataModels
 import SwiftUI
-import ApiService
 
 public struct MovieCard: View {
     let url: URL

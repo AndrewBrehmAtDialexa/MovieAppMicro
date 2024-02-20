@@ -1,5 +1,6 @@
 import Combine
 import Foundation
+import DataModels
 
 public class MovieService {
     public init() {}

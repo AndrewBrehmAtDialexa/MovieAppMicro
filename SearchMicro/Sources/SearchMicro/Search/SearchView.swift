@@ -1,5 +1,6 @@
 import SwiftUI
 import CommonUI
+import FeatureComponent
 
 public struct SearchView: View {
     @StateObject var viewModel = SearchViewModel()
