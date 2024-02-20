@@ -1,6 +1,5 @@
 import DataModels
 import FeatureView
-import SwiftUI
 
 class SearchNavigationViewModel {
     // MARK: - View Builders

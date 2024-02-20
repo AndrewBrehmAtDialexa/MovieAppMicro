@@ -1,6 +1,6 @@
-import SwiftUI
-import DataModels
 import CommonUI
+import DataModels
+import SwiftUI
 
 public struct MovieCard: View {
     let movie: Movie

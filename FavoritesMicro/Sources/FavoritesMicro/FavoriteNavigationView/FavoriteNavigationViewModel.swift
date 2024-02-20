@@ -1,7 +1,5 @@
-import Foundation
 import DataModels
 import FeatureView
-import SwiftUI
 
 class FavoriteNavigationViewModel {
     // MARK: - View Builders
