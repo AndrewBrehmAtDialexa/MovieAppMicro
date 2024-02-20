@@ -1,5 +1,4 @@
 import SwiftUI
-import UserData
 import DataModels
 import CommonUI
 
