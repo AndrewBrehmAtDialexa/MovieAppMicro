@@ -7,7 +7,7 @@
 
 import Foundation
 import CommonUI
-import ApiService
+import DataModels
 import SwiftUI
 
 class FavoriteNavigationViewModel {

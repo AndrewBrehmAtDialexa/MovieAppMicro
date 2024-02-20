@@ -1,6 +1,6 @@
 import SwiftUI
 import CommonUI
-import ApiService
+import DataModels
 
 public struct StyleGuideView: View {
     @State private var searchText: String = ""

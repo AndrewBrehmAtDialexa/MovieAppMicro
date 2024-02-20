@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import ApiService
+import DataModels
 
 public class FavoriteRouter: ObservableObject {
     public static let shared: FavoriteRouter = .init()

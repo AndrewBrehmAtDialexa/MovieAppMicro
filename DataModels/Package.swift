@@ -4,25 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "UserData",
-    platforms: [.iOS(.v17)],
+    name: "DataModels",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "UserData",
-            targets: ["UserData"]),
-    ],
-    dependencies: [
-        .package(path: "DataModels"),
+            name: "DataModels",
+            targets: ["DataModels"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "UserData",
-            dependencies: ["DataModels"]),
+            name: "DataModels"),
         .testTarget(
-            name: "UserDataTests",
-            dependencies: ["UserData"]),
+            name: "DataModelsTests",
+            dependencies: ["DataModels"]),
     ]
 )
