@@ -5,7 +5,10 @@ import SwiftUI
 public struct MovieCard: View {
     let url: URL
     public init?(movie: Movie) {
-        self.url = URL(string: movie.posterUrl)!
+        guard let movieURL = URL(string: movie.posterUrl) else {
+            return nil
+        }
+        self.url = movieURL
     }
     
     public var body: some View {

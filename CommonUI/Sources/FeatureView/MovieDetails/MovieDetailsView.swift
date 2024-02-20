@@ -7,7 +7,10 @@ public struct MovieDetailsView: View {
     let url: URL
     public init?(movie: Movie) {
         self.viewModel = MovieDetailsViewModel(movie: movie)
-        self.url = URL(string: movie.posterUrl)!
+        guard let movieURL = URL(string: movie.posterUrl) else {
+            return nil
+        }
+        self.url = movieURL
     }
     
     public var body: some View {
@@ -84,7 +87,6 @@ public struct MovieDetailsView: View {
                 if let data = data, let response = response {
                     let cachedResponse = CachedURLResponse(response: response, data: data)
                     URLCache.shared.storeCachedResponse(cachedResponse, for: request)
-                    print("caching: url: " + url.absoluteString)
                 }
             }.resume()
         }

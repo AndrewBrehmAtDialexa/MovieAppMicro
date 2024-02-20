@@ -7,7 +7,10 @@ public struct MovieRow: View {
     let url: URL
     public init?(movie: Movie) {
         self.movie = movie
-        self.url = URL(string: movie.posterUrl)!
+        guard let movieURL = URL(string: movie.posterUrl) else {
+            return nil
+        }
+        self.url = movieURL
     }
     
     public var body: some View {
