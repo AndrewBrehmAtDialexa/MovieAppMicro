@@ -14,18 +14,18 @@ public struct MovieRow: View {
                 if let image = phase.image {
                     image
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .cornerRadius(4)
                 } else if phase.error != nil {
                     Image(systemName: "film")
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
                         .foregroundStyle(Color.secondaryLight)
                         .cornerRadius(4)
                 } else {
                     ProgressView()
                 }
             }
+            .cornerRadius(4)
+            .aspectRatio(contentMode: .fit)
+            .frame(maxWidth: 80)
             .padding(10)
             
             VStack(alignment: .leading) {
