@@ -4,32 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "SearchMicro",
-    platforms: [.iOS(.v17)],
+    name: "DataModels",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "SearchMicro",
-            targets: ["SearchMicro"]
-        ),
-    ],
-    dependencies: [
-        .package(path: "Navigation"),
-        .package(path: "CommonUI"),
-        .package(path: "ApiService"),
-        .package(path: "UserData"),
-        .package(path: "DataModels"),
+            name: "DataModels",
+            targets: ["DataModels"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "SearchMicro",
-            dependencies: ["Navigation", "CommonUI", "ApiService", "UserData", "DataModels"]
-        ),
+            name: "DataModels"),
         .testTarget(
-            name: "SearchMicroTests",
-            dependencies: ["SearchMicro"]
-        ),
+            name: "DataModelsTests",
+            dependencies: ["DataModels"]),
     ]
 )

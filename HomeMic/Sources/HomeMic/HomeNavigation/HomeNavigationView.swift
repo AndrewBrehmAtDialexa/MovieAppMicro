@@ -14,8 +14,6 @@ public struct HomeNavigationView: View {
             HomeView()
                 .navigationDestination(for: HomeRouter.Destination.self) { destination in
                     switch destination {
-                    case .staticIcon:
-                        viewModel.createStaticIconView()
                     case .styleGuide:
                         viewModel.createStyleGuideView()
                     }

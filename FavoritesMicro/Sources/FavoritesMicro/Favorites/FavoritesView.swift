@@ -1,5 +1,6 @@
 import SwiftUI
 import CommonUI
+import FeatureComponent
 
 public struct FavoritesView: View {
     @ObservedObject var viewModel = FavoritesViewModel()

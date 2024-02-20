@@ -1,5 +1,6 @@
+import CommonUI
+import DataModels
 import SwiftUI
-import ApiService
 
 public struct MovieRow: View {
     let movie: Movie
@@ -14,18 +15,18 @@ public struct MovieRow: View {
                 if let image = phase.image {
                     image
                         .resizable()
-                        .frame(width: 80, height: 100)
-                        .cornerRadius(4)
                 } else if phase.error != nil {
                     Image(systemName: "film")
                         .resizable()
-                        .frame(width: 80, height: 100)
                         .foregroundStyle(Color.secondaryLight)
                         .cornerRadius(4)
                 } else {
                     ProgressView()
                 }
             }
+            .cornerRadius(4)
+            .aspectRatio(contentMode: .fit)
+            .frame(maxWidth: 80)
             .padding(10)
             
             VStack(alignment: .leading) {
@@ -50,6 +51,7 @@ public struct MovieRow: View {
         .background(
             RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.secondaryLight.opacity(0.4), lineWidth: 1)
+                .background(Color.white)
         )
     }
 }

@@ -4,7 +4,6 @@ public class HomeRouter: ObservableObject {
     public static let shared: HomeRouter = .init()
 
     public enum Destination: Codable, Hashable {
-        case staticIcon
         case styleGuide
     }
 

@@ -1,6 +1,7 @@
+import CommonUI
+import FeatureComponent
 import Navigation
 import SwiftUI
-import CommonUI
 
 public struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
@@ -22,11 +23,6 @@ public struct HomeView: View {
             }
             
             HStack {
-                Button("See a Cat!") {
-                    viewModel.seeCatButtonTapped()
-                }
-                .buttonStyle(LightGreenButton())
-                
                 Button("See style guide") {
                     viewModel.seeStyleGuideButtonTapped()
                 }

@@ -1,7 +1,7 @@
+import Combine
+import DataModels
 import SwiftUI
 import UserData
-import Combine
-import ApiService
 
 public class MovieDetailsViewModel: ObservableObject {
     private let userData = UserData.shared

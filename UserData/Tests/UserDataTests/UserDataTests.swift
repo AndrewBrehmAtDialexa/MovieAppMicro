@@ -1,12 +1,44 @@
-import XCTest
+import Nimble
+import Quick
+import SwiftUI
+import ViewInspector
 @testable import UserData
+@testable import ApiService
 
-final class UserDataTests: XCTestCase {
-    func testExample() throws {
-        // XCTest Documentation
-        // https://developer.apple.com/documentation/xctest
+class UserDataConcurrencySpec: QuickSpec {
 
-        // Defining Test Cases and Test Methods
-        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
+    override class func spec() {
+
+        describe("UserData concurrent add/remove movies") {
+
+            var userData: UserData!
+
+            beforeEach {
+                userData = UserData.shared
+            }
+
+            it("should handle concurrent add/remove operations") {
+                let dispatchGroup = DispatchGroup()
+                let numberOfThreads = 10
+                
+                for _ in 0..<numberOfThreads {
+                    dispatchGroup.enter()
+
+                    DispatchQueue.global().async {
+                        for _ in 0..<100 {
+                            let movie = Movie(title: "Test Movie", year: "2024", imdbId: UUID().uuidString, type: "", posterUrl: "")
+                            let isFavorite = userData.updateFavirateStatus(on: movie)
+                            expect(isFavorite) == userData.isFavorite(movie: movie)
+                        }
+
+                        dispatchGroup.leave()
+                    }
+                }
+                let timeout: DispatchTime = .now() + .seconds(10)
+                let result = dispatchGroup.wait(timeout: timeout)
+
+                expect(result).to(equal(.success))
+            }
+        }
     }
 }

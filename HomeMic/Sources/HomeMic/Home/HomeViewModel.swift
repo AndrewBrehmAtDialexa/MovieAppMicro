@@ -1,4 +1,5 @@
 import ApiService
+import DataModels
 import Foundation
 import Navigation
 
@@ -21,10 +22,6 @@ public class HomeViewModel: ObservableObject {
                 print("Error : An error occur when fetching data.")
             }
         }
-    }
-    
-    func seeCatButtonTapped() {
-        homeRouter.navigate(to: .staticIcon)
     }
     
     func seeStyleGuideButtonTapped() {

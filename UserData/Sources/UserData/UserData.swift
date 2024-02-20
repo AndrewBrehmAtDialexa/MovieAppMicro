@@ -1,10 +1,11 @@
 import SwiftUI
-import ApiService
+import DataModels
 
 public class UserData: ObservableObject {
     public static let shared: UserData = .init()
     
     @Published public var favoriteMovies: [Movie] = [] 
+    private let serialQueue = DispatchQueue(label: "favoriteQueue", attributes: .concurrent)
     
     private init() { }
     
@@ -20,15 +21,21 @@ public class UserData: ObservableObject {
     }
     
     public func isFavorite(movie: Movie) -> Bool {
-        favoriteMovies.contains(where: { $0.imdbId == movie.imdbId})
+        serialQueue.sync {
+            self.favoriteMovies.contains(where: { $0.imdbId == movie.imdbId})
+        }
     }
     
     //MARK: - private functions
     private func addFavorite(movie: Movie) {
-        favoriteMovies.append(movie)
+        serialQueue.async(flags: .barrier) {
+            self.favoriteMovies.append(movie)
+        }
     }
     
     private func removeFavorite(movie: Movie) {
-        favoriteMovies.removeAll(where: { $0.imdbId == movie.imdbId })
+        serialQueue.async(flags: .barrier) {
+            self.favoriteMovies.removeAll(where: { $0.imdbId == movie.imdbId })
+        }
     }
 }
