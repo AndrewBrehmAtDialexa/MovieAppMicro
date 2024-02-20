@@ -1,5 +1,5 @@
 import SwiftUI
-import ApiService
+import DataModels
 
 public class SearchRouter: ObservableObject {
     public static let shared: SearchRouter = .init()

@@ -1,5 +1,5 @@
 import SwiftUI
-import ApiService
+import DataModels
 
 public class UserData: ObservableObject {
     public static let shared: UserData = .init()
