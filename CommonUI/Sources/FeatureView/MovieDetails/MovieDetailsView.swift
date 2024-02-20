@@ -1,6 +1,7 @@
 import SwiftUI
 import UserData
 import DataModels
+import CommonUI
 
 public struct MovieDetailsView: View {
     @ObservedObject private var viewModel: MovieDetailsViewModel

@@ -1,6 +1,7 @@
 import Foundation
 import CommonUI
 import DataModels
+import FeatureView
 import SwiftUI
 
 class SearchNavigationViewModel {

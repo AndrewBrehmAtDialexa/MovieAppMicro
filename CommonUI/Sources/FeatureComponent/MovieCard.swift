@@ -1,5 +1,6 @@
 import SwiftUI
 import DataModels
+import CommonUI
 
 public struct MovieCard: View {
     let movie: Movie
