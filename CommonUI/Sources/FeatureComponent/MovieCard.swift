@@ -35,7 +35,6 @@ public struct MovieCard: View {
                 if let data = data, let response = response {
                     let cachedResponse = CachedURLResponse(response: response, data: data)
                     URLCache.shared.storeCachedResponse(cachedResponse, for: request)
-                    print("caching: url: " + url.absoluteString)
                 }
             }.resume()
         }
