@@ -3,9 +3,10 @@ import ApiService
 
 public struct MovieRow: View {
     let movie: Movie
-    
-    public init(movie: Movie) {
+    let url: URL
+    public init?(movie: Movie) {
         self.movie = movie
+        self.url = URL(string: movie.posterUrl)!
     }
     
     public var body: some View {
@@ -51,5 +52,16 @@ public struct MovieRow: View {
             RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.secondaryLight.opacity(0.4), lineWidth: 1)
         )
+        .onAppear {
+            // Load and cache the image using URLSession
+            let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
+            URLSession.shared.dataTask(with: request) { data, response, _ in
+                if let data = data, let response = response {
+                    let cachedResponse = CachedURLResponse(response: response, data: data)
+                    URLCache.shared.storeCachedResponse(cachedResponse, for: request)
+                    print("caching: url: " + url.absoluteString)
+                }
+            }.resume()
+        }
     }
 }
