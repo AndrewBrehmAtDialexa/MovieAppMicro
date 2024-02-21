@@ -19,7 +19,7 @@ class HomeRouterSpec: QuickSpec {
             
             describe("navigate(to:)") {
                 beforeEach {
-                    uut?.navigate(to: .staticIcon)
+                    uut?.navigate(to: .styleGuide)
                 }
                 
                 it("calls .navPathWrapper.appendToNavPath()") {
@@ -27,16 +27,16 @@ class HomeRouterSpec: QuickSpec {
                 }
                 
                 describe("that call") {
-                    it("has a valuePassed of '.staticIcon'") {
+                    it("has a valuePassed of '.styleGuide'") {
                         let passed: HomeRouter.Destination = mockNavigationPathWrapper?.valuePassed as! HomeRouter.Destination
-                        expect(passed).to(equal(HomeRouter.Destination.staticIcon))
+                        expect(passed).to(equal(HomeRouter.Destination.styleGuide))
                     }
                 }
             }
             
             describe("navigateBack()") {
                 beforeEach {
-                    mockNavigationPathWrapper?.navPath.append(HomeRouter.Destination.staticIcon)
+                    mockNavigationPathWrapper?.navPath.append(HomeRouter.Destination.styleGuide)
                     uut?.navigateBack()
                 }
                 
@@ -47,7 +47,7 @@ class HomeRouterSpec: QuickSpec {
             
             describe("navigateToRoot()") {
                 beforeEach {
-                    mockNavigationPathWrapper?.navPath.append(HomeRouter.Destination.staticIcon)
+                    mockNavigationPathWrapper?.navPath.append(HomeRouter.Destination.styleGuide)
                     uut?.navigateToRoot()
                 }
                 

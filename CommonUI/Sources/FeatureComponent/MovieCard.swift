@@ -1,5 +1,6 @@
+import CommonUI
+import DataModels
 import SwiftUI
-import ApiService
 
 public struct MovieCard: View {
     let movie: Movie
@@ -9,16 +10,16 @@ public struct MovieCard: View {
     
     public var body: some View {
         VStack {
-            AsyncImage(url: URL(string: movie.posterUrl)) { phase in
+            AsyncImageViewBuilder(urlString:movie.posterUrl) { phase in
                 if let image = phase.image {
                     image
                         .resizable()
-                        .frame(width: 120, height: 180)
+                        .aspectRatio(contentMode: .fit)
                         .cornerRadius(10)
                 } else if phase.error != nil {
                     Image(systemName: "film")
                         .resizable()
-                        .frame(width: 120, height: 180)
+                        .aspectRatio(contentMode: .fit)
                         .foregroundStyle(Color.secondaryLight)
                         .cornerRadius(10)
                 } else {

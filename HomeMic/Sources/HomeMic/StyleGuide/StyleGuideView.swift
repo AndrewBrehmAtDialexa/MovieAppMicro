@@ -1,11 +1,12 @@
-import SwiftUI
 import CommonUI
-import ApiService
+import DataModels
+import FeatureComponent
+import FeatureView
+import SwiftUI
 
 public struct StyleGuideView: View {
     @State private var searchText: String = ""
     @State private var isSearching: Bool = false
-    
     public init() {}
     
     public var body: some View {
@@ -32,7 +33,7 @@ public struct StyleGuideView: View {
             MovieCardView()
             UnderlineView()
             
-            MovieDetailsView()
+            MovieDetailsDemoView()
             UnderlineView()
         }
     }
@@ -216,7 +217,7 @@ struct MovieCardView: View {
 }
 
 // Movie Details Common
-struct MovieDetailsView: View {
+struct MovieDetailsDemoView: View {
     let mockMovie = Movie(
         title: "Movie Title",
         year: "0000",
@@ -232,15 +233,14 @@ struct MovieDetailsView: View {
                 .padding()
                 .border(Color.secondaryDark)
             
-            //TODO : Fix it ! Not sure why it is not working.
-            // MovieDetailsView(movie: mockMovie)
+            MovieDetailsView(movie: mockMovie)
         }
         .padding(.bottom)
     }
 }
 
 // MARK: - Preview
+
 #Preview {
     StyleGuideView()
 }
-

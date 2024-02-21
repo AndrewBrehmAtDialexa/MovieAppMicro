@@ -1,5 +1,6 @@
 import SwiftUI
 import CommonUI
+import FeatureComponent
 
 public struct SearchView: View {
     @StateObject var viewModel = SearchViewModel()
@@ -44,7 +45,7 @@ public struct SearchView: View {
                     .accessibilityIdentifier("movieListView")
                 
                 case .showEmpty:
-                    Text("No movies founds ! ")
+                    Text("No movies found.")
                         .subTitleTextStyle()
                     
                 case .loading:

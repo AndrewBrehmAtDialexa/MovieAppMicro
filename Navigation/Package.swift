@@ -14,7 +14,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(path: "ApiService"),
+        .package(path: "DataModels"),
         // TESTING
         .package(url: "https://github.com/Quick/Quick", from: "7.4.0"),
         .package(url: "https://github.com/Quick/Nimble", from: "13.2.0"),
@@ -25,7 +25,7 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Navigation",
-            dependencies: ["ApiService"]
+            dependencies: ["DataModels"]
         ),
         .testTarget(
             name: "NavigationTests",

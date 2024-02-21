@@ -1,10 +1,9 @@
+import CommonUI
+import DataModels
 import SwiftUI
-import ApiService
-import UserData
 
 public struct MovieDetailsView: View {
     @ObservedObject private var viewModel: MovieDetailsViewModel
-    
     public init(movie: Movie) {
         self.viewModel = MovieDetailsViewModel(movie: movie)
     }
@@ -28,16 +27,16 @@ public struct MovieDetailsView: View {
             Text(viewModel.movie.title)
                 .titleTextStyle()
             
-            AsyncImage(url: URL(string: viewModel.movie.posterUrl)) { phase in
+            AsyncImageViewBuilder(urlString: viewModel.movie.posterUrl) { phase in
                 if let image = phase.image {
                     image
                         .resizable()
-                        .frame(width: 180, height: 250)
+                        .aspectRatio(contentMode: .fit)
                         .cornerRadius(10)
                 } else if phase.error != nil {
                     Image(systemName: "film")
                         .resizable()
-                        .frame(width: 180, height: 250)
+                        .aspectRatio(contentMode: .fit)
                         .foregroundStyle(Color.secondaryLight)
                         .cornerRadius(10)
                 } else {

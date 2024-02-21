@@ -1,5 +1,6 @@
 @testable import ApiService
 @testable import Navigation
+@testable import DataModels
 
 import Nimble
 import Quick
