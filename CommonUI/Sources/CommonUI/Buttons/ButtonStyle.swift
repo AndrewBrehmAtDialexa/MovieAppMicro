@@ -26,7 +26,7 @@ public struct LightGreenButton: ButtonStyle {
     }
 }
 
-#Preview(body: {
+#Preview {
     VStack {
         Button("Green Button Style Enabled") {}
             .buttonStyle(GreenButton(isEnabled: true))
@@ -37,4 +37,4 @@ public struct LightGreenButton: ButtonStyle {
         Button("Light Green Button") {}
             .buttonStyle(LightGreenButton())
     }
-})
+}
