@@ -28,7 +28,7 @@ public struct MovieDetailsView: View {
             Text(viewModel.movie.title)
                 .titleTextStyle()
             
-            AsyncImage(url: URL(string: viewModel.movie.posterUrl)) { phase in
+            AsyncImageViewBuilder(urlString: viewModel.movie.posterUrl) { phase in
                 if let image = phase.image {
                     image
                         .resizable()

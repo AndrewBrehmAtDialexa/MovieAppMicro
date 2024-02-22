@@ -4,14 +4,13 @@ import SwiftUI
 
 public struct MovieRow: View {
     let movie: Movie
-    
     public init(movie: Movie) {
         self.movie = movie
     }
     
     public var body: some View {
         HStack {
-            AsyncImage(url: URL(string: movie.posterUrl)) { phase in
+            AsyncImageViewBuilder(urlString:movie.posterUrl) { phase in
                 if let image = phase.image {
                     image
                         .resizable()

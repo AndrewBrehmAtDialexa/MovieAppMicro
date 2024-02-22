@@ -10,7 +10,7 @@ public struct MovieCard: View {
 
     public var body: some View {
         VStack {
-            AsyncImage(url: URL(string: movie.posterUrl)) { phase in
+            AsyncImageViewBuilder(urlString:movie.posterUrl) { phase in
                 if let image = phase.image {
                     image
                         .resizable()
