@@ -7,7 +7,7 @@ public struct MovieCard: View {
     public init(movie: Movie) {
         self.movie = movie
     }
-    
+
     public var body: some View {
         VStack {
             AsyncImage(url: URL(string: movie.posterUrl)) { phase in
@@ -29,4 +29,12 @@ public struct MovieCard: View {
             .padding(10)
         }
     }
+}
+
+#Preview("Has Image") {
+    MovieCard(movie: Movie(title: "Batman: The Animated Series", year: "1992–1995", imdbId: "tt0103359", type: "series", posterUrl: "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg"))
+}
+
+#Preview("No Image") {
+    MovieCard(movie: Movie(title: "Batman: The Animated Series", year: "1992–1995", imdbId: "tt0103359", type: "series", posterUrl: "bad_url"))
 }

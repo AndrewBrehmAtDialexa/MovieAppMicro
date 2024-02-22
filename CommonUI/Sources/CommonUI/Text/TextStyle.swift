@@ -59,3 +59,20 @@ public struct SmallBodyText: ViewModifier {
             .foregroundStyle(Color.primaryDark)
     }
 }
+
+#Preview {
+    VStack {
+        Text(".largeTitleTextStyle()")
+            .largeTitleTextStyle()
+        Text(".titleTextStyle()")
+            .titleTextStyle()
+        Text(".smallTitleTextStyle()")
+            .smallTitleTextStyle()
+        Text(".subTitleTextStyle()")
+            .subTitleTextStyle()
+        Text(".bodyTextStyle()")
+            .bodyTextStyle()
+        Text(".smallBodyTextStyle()")
+            .smallBodyTextStyle()
+    }
+}

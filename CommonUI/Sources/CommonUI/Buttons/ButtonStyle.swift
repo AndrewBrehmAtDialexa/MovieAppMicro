@@ -5,7 +5,7 @@ public struct GreenButton: ButtonStyle {
     public init(isEnabled: Bool) {
         self.isEnabled = isEnabled
     }
-    
+
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
@@ -25,3 +25,16 @@ public struct LightGreenButton: ButtonStyle {
             .clipShape(Capsule())
     }
 }
+
+#Preview(body: {
+    VStack {
+        Button("Green Button Style Enabled") {}
+            .buttonStyle(GreenButton(isEnabled: true))
+
+        Button("Green Button Style Disabled") {}
+            .buttonStyle(GreenButton(isEnabled: false))
+
+        Button("Light Green Button") {}
+            .buttonStyle(LightGreenButton())
+    }
+})

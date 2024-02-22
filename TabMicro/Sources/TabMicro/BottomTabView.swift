@@ -26,3 +26,7 @@ public struct BottomTabView: View {
         .onAppear { self.didAppear?(self) }
     }
 }
+
+#Preview {
+    BottomTabView()
+}

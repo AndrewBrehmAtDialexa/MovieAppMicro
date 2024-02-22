@@ -3,12 +3,12 @@ import SwiftUI
 public struct SearchBar: View {
     @Binding var searchText: String
     @Binding var isSearching: Bool
-    
+
     public init(searchText: Binding<String>, isSearching: Binding<Bool>) {
         _searchText = searchText
         _isSearching = isSearching
     }
-    
+
     public var body: some View {
         HStack {
             TextField("Search...", text: $searchText)
@@ -26,7 +26,7 @@ public struct SearchBar: View {
                 }
                 .padding(.horizontal)
                 .padding(.bottom, 8)
-            
+
             if isSearching {
                 Button(action: {
                     searchText = ""
@@ -38,5 +38,15 @@ public struct SearchBar: View {
                 }
             }
         }
+    }
+}
+
+#Preview {
+    VStack {
+        SearchBar(searchText: .constant(""), isSearching: .constant(false))
+
+        SearchBar(searchText: .constant("Search Text - IS SEARCHING"), isSearching: .constant(true))
+
+        SearchBar(searchText: .constant("Search Text - IS NOT SEARCHING"), isSearching: .constant(false))
     }
 }
