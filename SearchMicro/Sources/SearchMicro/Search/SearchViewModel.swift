@@ -28,24 +28,26 @@ public class SearchViewModel: ObservableObject {
     init() {
         $searchText
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
-            .receive(on: DispatchQueue.main)
+            .receive(on: RunLoop.main)
             .sink { [weak self] value in
                 guard let self = self else { return }
                 self.debouncedText = value
                 
                 if (!self.debouncedText.isEmpty) {
-                    Task {
-                        do {
-                            let moviesResponse = try await self.movieService.getMovies(bySearchTerm: self.debouncedText) ?? []                            
-                            if moviesResponse.isEmpty {
+                    DispatchQueue.main.async {
+                        Task {
+                            do {
+                                let moviesResponse = try await self.movieService.getMovies(bySearchTerm: self.debouncedText) ?? []
+                                if moviesResponse.isEmpty {
+                                    self.state = .showEmpty
+                                } else {
+                                    self.searchMovieResults = moviesResponse
+                                    self.state = .showData
+                                }
+                            } catch {
+                                // TODO: Change state to show error, but now api is not sending error when emptry
                                 self.state = .showEmpty
-                            } else {
-                                self.searchMovieResults = moviesResponse
-                                self.state = .showData
                             }
-                        } catch {
-                            // TODO: Change state to show error, but now api is not sending error when emptry
-                            self.state = .showEmpty
                         }
                     }
                 }
