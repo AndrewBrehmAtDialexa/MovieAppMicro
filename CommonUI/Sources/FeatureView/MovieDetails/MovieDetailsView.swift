@@ -3,18 +3,19 @@ import DataModels
 import SwiftUI
 
 public struct MovieDetailsView: View {
-    @ObservedObject private var viewModel: MovieDetailsViewModel
+    @ObservedObject var viewModel: MovieDetailsViewModel
+    
     public init(movie: Movie) {
         self.viewModel = MovieDetailsViewModel(movie: movie)
     }
     
     public var body: some View {
-        VStack() {
+        VStack {
             HStack {
                 Spacer()
                     .frame(maxWidth: .infinity)
                 
-                Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart" )
+                Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
                     .resizable()
                     .frame(width: 30, height: 30)
                     .foregroundStyle(Color.red)
@@ -76,4 +77,26 @@ public struct MovieDetailsView: View {
             viewModel.fetchFavorite()
         }
     }
+}
+
+// MARK: - Previews
+
+#Preview("Image") {
+    MovieDetailsView(movie: Movie(title: "Batman: The Animated Series", year: "1992–1995", imdbId: "tt0103359", type: "series", posterUrl: "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg"))
+}
+
+#Preview("No Image") {
+    MovieDetailsView(movie: Movie(title: "Batman: The Animated Series", year: "1992–1995", imdbId: "tt0103359", type: "series", posterUrl: "bad_url"))
+}
+
+#Preview {
+    let movie = Movie(title: "Batman: The Animated Series", year: "1992–1995", imdbId: "tt0103359", type: "series", posterUrl: "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg")
+    
+    var viewModel = MovieDetailsViewModel(movie: movie)
+    viewModel.favoriteIconTapped()
+    
+    var view = MovieDetailsView(movie: movie)
+    view.viewModel = viewModel
+    
+    return view
 }

@@ -1,6 +1,6 @@
-import SwiftUI
 import CommonUI
 import FeatureComponent
+import SwiftUI
 
 public struct FavoritesView: View {
     @ObservedObject var viewModel = FavoritesViewModel()
@@ -14,7 +14,7 @@ public struct FavoritesView: View {
                     .imageScale(.large)
                     .foregroundStyle(Color.primaryDark)
                     .fontWeight(.bold)
-                
+
                 Text("Favorites")
                     .largeTitleTextStyle()
             }
@@ -31,7 +31,6 @@ public struct FavoritesView: View {
                             .onTapGesture {
                                 viewModel.goToMovieDetails(movie: movie)
                             }
-                        
                     }
                 }
                 .listStyle(.plain)
@@ -44,3 +43,24 @@ public struct FavoritesView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
+
+// MARK: - Previews
+
+#Preview("No Favs") {
+    FavoriteNavigationView()
+}
+
+#if DEBUG
+import DataModels
+
+#Preview("Has Favs") {
+    let movie = Movie(title: "Batman: The Animated Series", year: "1992–1995", imdbId: "tt0103359", type: "series", posterUrl: "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg")
+
+    var viewModel = FavoritesViewModel()
+    viewModel.userData.favoriteMovies = [movie, movie, movie]
+    var view = FavoritesView()
+    view.viewModel = viewModel
+
+    return view
+}
+#endif

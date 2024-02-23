@@ -24,3 +24,7 @@ public struct HomeNavigationView: View {
         .id("mainNavStack")
     }
 }
+
+#Preview {
+    HomeNavigationView()
+}
