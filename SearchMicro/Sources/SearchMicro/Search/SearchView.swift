@@ -3,9 +3,18 @@ import FeatureComponent
 import SwiftUI
 
 public struct SearchView: View {
-    @ObservedObject var viewModel = SearchViewModel()
     
-    public init() {}
+#if PREVIEW
+    let viewModel: SearchViewModel
+    
+    init(viewModel: SearchViewModel = SearchViewModel()) {
+        self.viewModel = viewModel
+    }
+    
+#else
+    @StateObject var viewModel = SearchViewModel()
+    
+#endif
     
     public var body: some View {
         VStack {
@@ -36,14 +45,13 @@ public struct SearchView: View {
                                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 0))
                                 .id(movie.imdbId)
                                 .onTapGesture {
-                                    // TODO: Work on passing isFavorite here...
                                     viewModel.goToMovieDetails(movie: movie)
                                 }
                         }
                     }
                     .listStyle(.plain)
                     .accessibilityIdentifier("movieListView")
-                
+                    
                 case .showEmpty:
                     Text("No movies found.")
                         .subTitleTextStyle()
@@ -68,9 +76,7 @@ public struct SearchView: View {
 #Preview("State .error") {
     var viewModel = SearchViewModel()
     viewModel.state = .error
-    var view = SearchView()
-    view.viewModel = viewModel
-    
+    var view = SearchView(viewModel: viewModel)
     return view
 }
 
@@ -83,10 +89,7 @@ import DataModels
     var viewModel = SearchViewModel()
     viewModel.state = .showData
     viewModel.searchMovieResults = [movie, movie, movie, movie]
-    var view = SearchView()
-    view.viewModel = viewModel
-    
-    return view
+    return SearchView(viewModel: viewModel)
 }
 
 #endif
@@ -94,17 +97,11 @@ import DataModels
 #Preview("State .showEmpty") {
     var viewModel = SearchViewModel()
     viewModel.state = .showEmpty
-    var view = SearchView()
-    view.viewModel = viewModel
-    
-    return view
+    return SearchView(viewModel: viewModel)
 }
 
 #Preview("State .loading") {
     var viewModel = SearchViewModel()
     viewModel.state = .loading
-    var view = SearchView()
-    view.viewModel = viewModel
-    
-    return view
+    return SearchView(viewModel: viewModel)
 }
