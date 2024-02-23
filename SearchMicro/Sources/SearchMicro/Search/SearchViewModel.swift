@@ -14,7 +14,7 @@ enum ScreenStateType {
 }
 
 //MARK: - ViewModel
-@MainActor
+//@MainActor
 public class SearchViewModel: ObservableObject {
     @Published var state: ScreenStateType = .showEmpty
     @Published var searchText: String = ""
