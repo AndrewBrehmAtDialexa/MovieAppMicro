@@ -4,11 +4,11 @@ import SwiftUI
 public struct SearchNavigationView: View {
     var viewModel = SearchNavigationViewModel()
     @ObservedObject var navPathWrapper = SearchRouter.shared.navPathWrapper
-
+    
     public init() {}
-
+    
     var didAppear: ((Self) -> Void)?
-
+    
     public var body: some View {
         NavigationStack(path: $navPathWrapper.navPath) {
             viewModel.createSearchView()
@@ -37,17 +37,14 @@ import FeatureView
 class MockSearchNavigationVieModel: SearchNavigationViewModel {
     var searchViewState: ScreenStateType = .error
     let movie = Movie(title: "Batman: The Animated Series", year: "1992–1995", imdbId: "tt0103359", type: "series", posterUrl: "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg")
-
+    
     override func createSearchView() -> SearchView {
         let viewModel = SearchViewModel()
         viewModel.state = searchViewState
         viewModel.searchMovieResults = [movie, movie, movie, movie]
-        var view = SearchView()
-        view.viewModel = viewModel
-
-        return view
+        return SearchView(viewModel: viewModel)
     }
-
+    
     override func createMovieDetailsView(movie _: Movie) -> MovieDetailsView {
         return MovieDetailsView(movie: movie)
     }
@@ -57,7 +54,7 @@ class MockSearchNavigationVieModel: SearchNavigationViewModel {
     var viewModel = MockSearchNavigationVieModel()
     var view = SearchNavigationView()
     view.viewModel = viewModel
-
+    
     return view
 }
 
@@ -66,7 +63,7 @@ class MockSearchNavigationVieModel: SearchNavigationViewModel {
     viewModel.searchViewState = .showEmpty
     var view = SearchNavigationView()
     view.viewModel = viewModel
-
+    
     return view
 }
 
@@ -75,7 +72,7 @@ class MockSearchNavigationVieModel: SearchNavigationViewModel {
     viewModel.searchViewState = .showData
     var view = SearchNavigationView()
     view.viewModel = viewModel
-
+    
     return view
 }
 
@@ -84,7 +81,7 @@ class MockSearchNavigationVieModel: SearchNavigationViewModel {
     viewModel.searchViewState = .loading
     var view = SearchNavigationView()
     view.viewModel = viewModel
-
+    
     return view
 }
 
