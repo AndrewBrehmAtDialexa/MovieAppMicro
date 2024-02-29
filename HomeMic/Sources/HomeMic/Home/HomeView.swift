@@ -2,11 +2,14 @@ import CommonUI
 import FeatureComponent
 import Navigation
 import SwiftUI
+//import MyLocalPod
 
 public struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     
-    public init() {}
+    public init() {
+        //LocalPodTest.sayHello()
+    }
 
     var didAppear: ((Self) -> Void)?
 
