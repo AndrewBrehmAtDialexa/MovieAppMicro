@@ -17,7 +17,6 @@ let package = Package(
         .package(path: "CommonUI"),
         .package(path: "DataModels"),
         .package(path: "Navigation"),
-        //.package(path: "../MovieAppMicro/MovieAppMicro/MyLocalPod"),
         
 
         // TESTING

@@ -15,6 +15,6 @@
     "ios": "13.0"
   },
   "swift_versions": "5.0",
-  "source_files": "Sources/**/*.swift",
+  "source_files": "Classes/**/*.swift",
   "swift_version": "5.0"
 }

@@ -24,9 +24,9 @@
 		55F57B672B75706C008D7AB0 /* MovieAppMicroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F57B662B75706C008D7AB0 /* MovieAppMicroUITests.swift */; };
 		55F57B692B75706C008D7AB0 /* MovieAppMicroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F57B682B75706C008D7AB0 /* MovieAppMicroUITestsLaunchTests.swift */; };
 		BB7020A91BD12115F07D9D14 /* Pods_MovieAppMicro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A02A6CA7474BC4441978D4 /* Pods_MovieAppMicro.framework */; };
-		C24D04802B8F8EAE001F6DF5 /* LocalPodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24D047F2B8F8EAE001F6DF5 /* LocalPodTest.swift */; };
 		C24D04822B8FBC3A001F6DF5 /* MyLocalPod.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C24D04812B8FBC3A001F6DF5 /* MyLocalPod.podspec */; };
 		C2A289C62B8FDAB7008E95EA /* PodToPackage in Frameworks */ = {isa = PBXBuildFile; productRef = C2A289C52B8FDAB7008E95EA /* PodToPackage */; };
+		C2A289DF2B90DD44008E95EA /* LocalPodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24D047F2B8F8EAE001F6DF5 /* LocalPodTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,18 +237,26 @@
 		C24D047D2B8F8E06001F6DF5 /* MyLocalPod */ = {
 			isa = PBXGroup;
 			children = (
+				C2A289DE2B90DC66008E95EA /* Classes */,
+				C2A289DD2B90DC56008E95EA /* Assets */,
 				C24D04812B8FBC3A001F6DF5 /* MyLocalPod.podspec */,
-				C24D047E2B8F8E69001F6DF5 /* Sources */,
 			);
 			path = MyLocalPod;
 			sourceTree = "<group>";
 		};
-		C24D047E2B8F8E69001F6DF5 /* Sources */ = {
+		C2A289DD2B90DC56008E95EA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		C2A289DE2B90DC66008E95EA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				C24D047F2B8F8EAE001F6DF5 /* LocalPodTest.swift */,
 			);
-			path = Sources;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,8 +518,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A289DF2B90DD44008E95EA /* LocalPodTest.swift in Sources */,
 				55F57B4B2B75706A008D7AB0 /* MovieAppMicroApp.swift in Sources */,
-				C24D04802B8F8EAE001F6DF5 /* LocalPodTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

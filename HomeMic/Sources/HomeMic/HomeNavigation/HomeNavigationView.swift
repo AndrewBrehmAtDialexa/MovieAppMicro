@@ -16,6 +16,8 @@ public struct HomeNavigationView: View {
                     switch destination {
                     case .styleGuide:
                         viewModel.createStyleGuideView()
+                    case .movieRating(let movie):
+                        viewModel.movieRatingView(movie: movie)
                     }
                 }
                 .id("homeView")

@@ -48,6 +48,9 @@ public struct HomeView: View {
                         HStack {
                             ForEach(viewModel.mockTopMovies, id: \.self) { movie in
                                 MovieCard(movie: movie)
+                                    .onTapGesture {
+                                        viewModel.movieRatingTapped(movie.title)
+                                    }
                             }
                         }
                     }
@@ -71,6 +74,9 @@ public struct HomeView: View {
                         HStack {
                             ForEach(viewModel.mockRecentMovies, id: \.self) { movie in
                                 MovieCard(movie: movie)
+                                    .onTapGesture {
+                                        viewModel.movieRatingTapped(movie.title)
+                                    }
                             }
                         }
                     }

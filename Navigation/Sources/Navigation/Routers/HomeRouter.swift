@@ -5,6 +5,7 @@ public class HomeRouter: ObservableObject {
 
     public enum Destination: Codable, Hashable {
         case styleGuide
+        case movieRating(movie: String)
     }
 
     @Published public var navPathWrapper = NavigationPathWrapper()

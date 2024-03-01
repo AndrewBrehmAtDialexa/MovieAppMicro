@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		006065C02CA149350898A1B561EDFBD2 /* Pods-MovieAppMicro-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F2A8A8886509D87F9968940BA4E11F /* Pods-MovieAppMicro-dummy.m */; };
-		0B5A0D5215AB7A1B9ED9C3D5D93517B7 /* LocalPodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B9BD6541378B631EA5994D39F7E04 /* LocalPodTest.swift */; };
-		2BA59954578843E80C0813572B82212D /* MyLocalPod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EE88A529907A92244D31722371CEDD /* MyLocalPod-dummy.m */; };
+		2BA59954578843E80C0813572B82212D /* MyLocalPod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF2D23FDA64060E500EB5F76E583AF1 /* MyLocalPod-dummy.m */; };
 		36747FC262A424E699048E1F1424166D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		485448A7B0EB5A30920E343815576564 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		5CDD313EE775F0D018785AEF2C6CECC8 /* Pods-MovieAppMicro-MovieAppMicroUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF13EC3744E4459B0665D4383092B7C /* Pods-MovieAppMicro-MovieAppMicroUITests-dummy.m */; };
 		6ED7C6FB515AC5C45B23C092320AD436 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7DA11201D58C02D0494EA7BD9D046659 /* LocalPodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827EAB3B7C4413BCC29364991272659 /* LocalPodTest.swift */; };
 		8BEFDB931F548B00B93325F6E128F723 /* Pods-MovieAppMicro-MovieAppMicroUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC6078D9D0EB7A9F15C9143FF60CB9F /* Pods-MovieAppMicro-MovieAppMicroUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93D5E5955558E39C7FB284E644797F82 /* Pods-MovieAppMicroTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 624A9E048D7DFB51D0B771AB8D29C14C /* Pods-MovieAppMicroTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC4EF40B4712134E3A00C02B2183BD35 /* MyLocalPod-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B6BF71B68C485953B5C10098145A94A /* MyLocalPod-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC4EF40B4712134E3A00C02B2183BD35 /* MyLocalPod-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CD838F4C94657F61149DB24AB5B2CBD /* MyLocalPod-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4CE1A14D90D6F3DCDC21A2C57BDF8ED /* Pods-MovieAppMicro-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB31DDBD2A62655E5A1D800A244B28EA /* Pods-MovieAppMicro-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D56F5D1B5B6AE756167D47E68DA6C694 /* Pods-MovieAppMicroTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 306FE9BD548A6B704345586E9E270E08 /* Pods-MovieAppMicroTests-dummy.m */; };
 		E8D85BB11FF16E8E14BAE264EB29652E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -48,42 +48,42 @@
 
 /* Begin PBXFileReference section */
 		004BD8D3973594ABED41D135ABDF22B1 /* Pods-MovieAppMicro-MovieAppMicroUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MovieAppMicro-MovieAppMicroUITests"; path = Pods_MovieAppMicro_MovieAppMicroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B6BF71B68C485953B5C10098145A94A /* MyLocalPod-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MyLocalPod-umbrella.h"; sourceTree = "<group>"; };
 		0F2FAD40EE3A66865D21882484E3CB9A /* Pods-MovieAppMicroTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieAppMicroTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1827EAB3B7C4413BCC29364991272659 /* LocalPodTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalPodTest.swift; path = Classes/LocalPodTest.swift; sourceTree = "<group>"; };
 		1D78B09AB91C3B410F1E864A51FC3D47 /* Pods-MovieAppMicro-MovieAppMicroUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MovieAppMicro-MovieAppMicroUITests.modulemap"; sourceTree = "<group>"; };
 		1F9AFC4315A267053DAD260BB714384E /* Pods-MovieAppMicro-MovieAppMicroUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieAppMicro-MovieAppMicroUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		25D73753EBC9942695AA23358A6C26FD /* Pods-MovieAppMicro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieAppMicro.release.xcconfig"; sourceTree = "<group>"; };
-		2D5B9BD6541378B631EA5994D39F7E04 /* LocalPodTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalPodTest.swift; path = Sources/LocalPodTest.swift; sourceTree = "<group>"; };
 		2DC6078D9D0EB7A9F15C9143FF60CB9F /* Pods-MovieAppMicro-MovieAppMicroUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieAppMicro-MovieAppMicroUITests-umbrella.h"; sourceTree = "<group>"; };
 		306FE9BD548A6B704345586E9E270E08 /* Pods-MovieAppMicroTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieAppMicroTests-dummy.m"; sourceTree = "<group>"; };
+		325E701557E7D9B6020DD93918374819 /* MyLocalPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MyLocalPod.debug.xcconfig; sourceTree = "<group>"; };
+		3CD838F4C94657F61149DB24AB5B2CBD /* MyLocalPod-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MyLocalPod-umbrella.h"; sourceTree = "<group>"; };
 		3FF602B775034C9C70A86AB176975ABF /* Pods-MovieAppMicro.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MovieAppMicro.modulemap"; sourceTree = "<group>"; };
-		4545D70119A3645C9F12C571DD0F8472 /* MyLocalPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MyLocalPod.release.xcconfig; sourceTree = "<group>"; };
-		48EE88A529907A92244D31722371CEDD /* MyLocalPod-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MyLocalPod-dummy.m"; sourceTree = "<group>"; };
+		4899AF4CAFAB3A4CA8EF6EF96CFA812C /* MyLocalPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MyLocalPod.release.xcconfig; sourceTree = "<group>"; };
 		497F193EC157B44BAEAEE5C497D0E735 /* Pods-MovieAppMicroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieAppMicroTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E618C0EAD1414E2ACE042ED767251C1 /* Pods-MovieAppMicroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieAppMicroTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4EE8DA3973C4FAA923E69261046A05C0 /* MyLocalPod.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MyLocalPod.modulemap; sourceTree = "<group>"; };
 		5D927C048E84C14F9DB59DD741D57FDE /* Pods-MovieAppMicro-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieAppMicro-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5F1F5F9ED062BB7A725D3A3AC4C75A59 /* Pods-MovieAppMicroTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MovieAppMicroTests"; path = Pods_MovieAppMicroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		624A9E048D7DFB51D0B771AB8D29C14C /* Pods-MovieAppMicroTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieAppMicroTests-umbrella.h"; sourceTree = "<group>"; };
 		62F2A8A8886509D87F9968940BA4E11F /* Pods-MovieAppMicro-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieAppMicro-dummy.m"; sourceTree = "<group>"; };
+		6EF2D23FDA64060E500EB5F76E583AF1 /* MyLocalPod-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MyLocalPod-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7E7F9D8F65E04CBD40F3DD58B922B871 /* MyLocalPod.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MyLocalPod.modulemap; sourceTree = "<group>"; };
 		86A996DD42E796385EF8857174DCAD52 /* Pods-MovieAppMicroTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieAppMicroTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		896DDCE5561ED9928D9B7DD3A4A76EB4 /* Pods-MovieAppMicro-MovieAppMicroUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieAppMicro-MovieAppMicroUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9640992DFC4854E8162F36FEFB512105 /* MyLocalPod-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MyLocalPod-prefix.pch"; sourceTree = "<group>"; };
 		9C6D15A0BED1963987A1081F6E108922 /* Pods-MovieAppMicro-MovieAppMicroUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieAppMicro-MovieAppMicroUITests-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A8F280038868F4978F32AEC3BEFF99EC /* Pods-MovieAppMicroTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MovieAppMicroTests.modulemap"; sourceTree = "<group>"; };
 		AA6E41AED52D4AADCE5AC8C6E8A4D5B8 /* Pods-MovieAppMicro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieAppMicro.debug.xcconfig"; sourceTree = "<group>"; };
-		AD68C6D0A770626788BC32F260C9BAE6 /* MyLocalPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MyLocalPod-Info.plist"; sourceTree = "<group>"; };
 		AEF13EC3744E4459B0665D4383092B7C /* Pods-MovieAppMicro-MovieAppMicroUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieAppMicro-MovieAppMicroUITests-dummy.m"; sourceTree = "<group>"; };
-		AF6AA34891D697D02F450845C0356FB8 /* MyLocalPod.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MyLocalPod.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B68F5885DE98F302B09067B10D9B9D4B /* Pods-MovieAppMicro-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieAppMicro-acknowledgements.plist"; sourceTree = "<group>"; };
 		C6A359C4655FEE1BFFF14D6E23C91946 /* Pods-MovieAppMicro-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieAppMicro-Info.plist"; sourceTree = "<group>"; };
 		D2BA21BCD5373D0D1CD7B7C585ACE3BE /* Pods-MovieAppMicroTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieAppMicroTests-Info.plist"; sourceTree = "<group>"; };
-		DB6139C017B1460B3B0DFE808D1023DB /* MyLocalPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MyLocalPod.debug.xcconfig; sourceTree = "<group>"; };
-		E31D97AF71CB9AE19E7BAF4261275499 /* MyLocalPod-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MyLocalPod-prefix.pch"; sourceTree = "<group>"; };
 		E61567A708B206A8CB1B2F6825AE46D5 /* Pods-MovieAppMicro-MovieAppMicroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieAppMicro-MovieAppMicroUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EA69F36D0BF3A65707B628DC6AA4B0E0 /* MyLocalPod.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MyLocalPod.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EAD90B009594C8D599ED0E7B369A4E0D /* Pods-MovieAppMicro-MovieAppMicroUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieAppMicro-MovieAppMicroUITests-frameworks.sh"; sourceTree = "<group>"; };
 		EB31DDBD2A62655E5A1D800A244B28EA /* Pods-MovieAppMicro-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieAppMicro-umbrella.h"; sourceTree = "<group>"; };
+		F402718001A6B791118A2108FC019A32 /* MyLocalPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MyLocalPod-Info.plist"; sourceTree = "<group>"; };
 		FA97C2FA5214B97FD5D3410862DF4D36 /* Pods-MovieAppMicro-MovieAppMicroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieAppMicro-MovieAppMicroUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FAD4751D87C4CBB5037AB0A4E61D9D50 /* MyLocalPod */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MyLocalPod; path = MyLocalPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5C21DB1FB4321CC5A60FD8C2C9FAEA /* Pods-MovieAppMicro */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MovieAppMicro"; path = Pods_MovieAppMicro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,21 +126,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C7B583ECC88B8245D1ACDB8A0B3FCE4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4EE8DA3973C4FAA923E69261046A05C0 /* MyLocalPod.modulemap */,
-				48EE88A529907A92244D31722371CEDD /* MyLocalPod-dummy.m */,
-				AD68C6D0A770626788BC32F260C9BAE6 /* MyLocalPod-Info.plist */,
-				E31D97AF71CB9AE19E7BAF4261275499 /* MyLocalPod-prefix.pch */,
-				0B6BF71B68C485953B5C10098145A94A /* MyLocalPod-umbrella.h */,
-				DB6139C017B1460B3B0DFE808D1023DB /* MyLocalPod.debug.xcconfig */,
-				4545D70119A3645C9F12C571DD0F8472 /* MyLocalPod.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../../Pods/Target Support Files/MyLocalPod";
-			sourceTree = "<group>";
-		};
 		2E30A0FF835B478F87BCF57F65AE0605 /* Pods-MovieAppMicroTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,14 +153,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D9324D994E73CB0F9118BE358E1BE66 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				AF6AA34891D697D02F450845C0356FB8 /* MyLocalPod.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +178,25 @@
 			path = "Target Support Files/Pods-MovieAppMicro";
 			sourceTree = "<group>";
 		};
+		800287769CB0D515A2C27B43ECC96109 /* MyLocalPod */ = {
+			isa = PBXGroup;
+			children = (
+				1827EAB3B7C4413BCC29364991272659 /* LocalPodTest.swift */,
+				8B25E8A93E45FD78BB1C6B27E5EA921C /* Pod */,
+				96DB8C05AB616E0562FD040C8F326C9A /* Support Files */,
+			);
+			name = MyLocalPod;
+			path = ../MovieAppMicro/MyLocalPod;
+			sourceTree = "<group>";
+		};
+		8B25E8A93E45FD78BB1C6B27E5EA921C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				EA69F36D0BF3A65707B628DC6AA4B0E0 /* MyLocalPod.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		944A25FD90C0C43F1B3CB8B4E7FBCAF4 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,23 +207,27 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		96DB8C05AB616E0562FD040C8F326C9A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E7F9D8F65E04CBD40F3DD58B922B871 /* MyLocalPod.modulemap */,
+				6EF2D23FDA64060E500EB5F76E583AF1 /* MyLocalPod-dummy.m */,
+				F402718001A6B791118A2108FC019A32 /* MyLocalPod-Info.plist */,
+				9640992DFC4854E8162F36FEFB512105 /* MyLocalPod-prefix.pch */,
+				3CD838F4C94657F61149DB24AB5B2CBD /* MyLocalPod-umbrella.h */,
+				325E701557E7D9B6020DD93918374819 /* MyLocalPod.debug.xcconfig */,
+				4899AF4CAFAB3A4CA8EF6EF96CFA812C /* MyLocalPod.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../Pods/Target Support Files/MyLocalPod";
+			sourceTree = "<group>";
+		};
 		A7C2D5C2756CA1E5C7B4722795A75011 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C16B7DDCF84E15D87D79ACE482EE772C /* MyLocalPod */,
+				800287769CB0D515A2C27B43ECC96109 /* MyLocalPod */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		C16B7DDCF84E15D87D79ACE482EE772C /* MyLocalPod */ = {
-			isa = PBXGroup;
-			children = (
-				2D5B9BD6541378B631EA5994D39F7E04 /* LocalPodTest.swift */,
-				4D9324D994E73CB0F9118BE358E1BE66 /* Pod */,
-				1C7B583ECC88B8245D1ACDB8A0B3FCE4 /* Support Files */,
-			);
-			name = MyLocalPod;
-			path = ../MovieAppMicro/MyLocalPod;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -469,7 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B5A0D5215AB7A1B9ED9C3D5D93517B7 /* LocalPodTest.swift in Sources */,
+				7DA11201D58C02D0494EA7BD9D046659 /* LocalPodTest.swift in Sources */,
 				2BA59954578843E80C0813572B82212D /* MyLocalPod-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,7 +651,7 @@
 		};
 		4BB43F79AA33231E4517746459D077D3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4545D70119A3645C9F12C571DD0F8472 /* MyLocalPod.release.xcconfig */;
+			baseConfigurationReference = 4899AF4CAFAB3A4CA8EF6EF96CFA812C /* MyLocalPod.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -753,7 +753,7 @@
 		};
 		DB3B55CBD1E5B3690980FF6EEDA736D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB6139C017B1460B3B0DFE808D1023DB /* MyLocalPod.debug.xcconfig */;
+			baseConfigurationReference = 325E701557E7D9B6020DD93918374819 /* MyLocalPod.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

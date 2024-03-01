@@ -7,7 +7,6 @@ import PodToPackage
 struct MovieAppMicroApp: App {
     init() {
         LocalPodTest.sayHello()
-        LocalPodToSwiftTest.sayHello()
         
     }
     var body: some Scene {
