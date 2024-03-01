@@ -4,9 +4,6 @@ import SwiftUI
 
 public struct MovieDetailsView: View {
     @ObservedObject var viewModel: MovieDetailsViewModel
-    @State private var movieRating = Int.random(in: 1...5)  // Initial rating
-    
-    @State private var isRatingScreenPresented = false
 
     public init(movie: Movie) {
         self.viewModel = MovieDetailsViewModel(movie: movie)
@@ -74,7 +71,6 @@ public struct MovieDetailsView: View {
                     .bodyTextStyle()
             }
 
-                //self.isRatingScreenPresented.toggle()
             NavigationLink(destination: RatingView(movie: viewModel.movie.title)) {
                     Text("Rating")
                 }
