@@ -1,0 +1,16 @@
+PODS:
+  - MyLocalPod (0.1.0)
+
+DEPENDENCIES:
+  - MyLocalPod (from `./MovieAppMicro/MyLocalPod`)
+
+EXTERNAL SOURCES:
+  MyLocalPod:
+    :path: "./MovieAppMicro/MyLocalPod"
+
+SPEC CHECKSUMS:
+  MyLocalPod: 41b2e55a16a72efd2a6971804b35fc670d5ed044
+
+PODFILE CHECKSUM: 5d0baf61316c16828a7b292c1987e54596e486c2
+
+COCOAPODS: 1.15.0

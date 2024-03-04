@@ -1,0 +1,6 @@
+framework module Pods_MovieAppMicro {
+  umbrella header "Pods-MovieAppMicro-umbrella.h"
+
+  export *
+  module * { export * }
+}

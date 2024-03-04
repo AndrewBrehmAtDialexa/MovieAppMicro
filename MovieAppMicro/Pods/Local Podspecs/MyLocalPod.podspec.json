@@ -1,0 +1,20 @@
+{
+  "name": "MyLocalPod",
+  "version": "0.1.0",
+  "summary": "A local pod for demonstration purposes.",
+  "description": "A local pod for demonstration purposes.",
+  "homepage": "https://example.com",
+  "license": "MIT",
+  "authors": {
+    "Your Name": "your.email@example.com"
+  },
+  "source": {
+    "path": "."
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "swift_versions": "5.0",
+  "source_files": "Classes/**/*.swift",
+  "swift_version": "5.0"
+}

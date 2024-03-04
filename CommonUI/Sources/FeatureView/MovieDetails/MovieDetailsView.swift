@@ -4,7 +4,7 @@ import SwiftUI
 
 public struct MovieDetailsView: View {
     @ObservedObject var viewModel: MovieDetailsViewModel
-    
+
     public init(movie: Movie) {
         self.viewModel = MovieDetailsViewModel(movie: movie)
     }
@@ -22,6 +22,7 @@ public struct MovieDetailsView: View {
                     .onTapGesture {
                         viewModel.favoriteIconTapped()
                     }
+
             }
             .padding()
             
@@ -69,6 +70,11 @@ public struct MovieDetailsView: View {
                 Text("\(viewModel.movie.imdbId)")
                     .bodyTextStyle()
             }
+
+            NavigationLink(destination: RatingView(movie: viewModel.movie.title)) {
+                    Text("Rating")
+                }
+
             
             Spacer()
         }

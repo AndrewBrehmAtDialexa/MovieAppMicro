@@ -27,4 +27,8 @@ public class HomeViewModel: ObservableObject {
     func seeStyleGuideButtonTapped() {
         homeRouter.navigate(to: .styleGuide)
     }
+    
+    func movieRatingTapped(_ movie: String) {
+        homeRouter.navigate(to: .movieRating(movie: movie))
+    }
 }
