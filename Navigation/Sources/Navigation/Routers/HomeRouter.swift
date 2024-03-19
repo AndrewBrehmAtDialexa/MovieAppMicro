@@ -1,3 +1,4 @@
+import DataModels
 import SwiftUI
 
 public class HomeRouter: ObservableObject {
@@ -5,6 +6,9 @@ public class HomeRouter: ObservableObject {
 
     public enum Destination: Codable, Hashable {
         case styleGuide
+        case catView
+        case someMovie(movie: Movie)
+        case dogView
     }
 
     @Published public var navPathWrapper = NavigationPathWrapper()

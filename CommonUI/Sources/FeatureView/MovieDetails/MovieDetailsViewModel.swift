@@ -3,14 +3,14 @@ import DataModels
 import SwiftUI
 import UserData
 
-public class MovieDetailsViewModel: ObservableObject {
+open class MovieDetailsViewModel: ObservableObject {
     private let userData = UserData.shared
     @Published var isFavorite = false
     @Published var movie: Movie
     
     private var cancellables: Set<AnyCancellable> = []
     
-    init(movie: Movie) {
+    public init(movie: Movie) {
         self.movie = movie
     }
     
@@ -18,7 +18,7 @@ public class MovieDetailsViewModel: ObservableObject {
         isFavorite = userData.isFavorite(movie: movie)
     }
     
-    func favoriteIconTapped() {
+    open func favoriteIconTapped() {
         isFavorite = userData.updateFavirateStatus(on: movie)
     }
 }

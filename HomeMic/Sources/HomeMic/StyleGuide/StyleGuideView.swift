@@ -7,10 +7,15 @@ import SwiftUI
 public struct StyleGuideView: View {
     @State private var searchText: String = ""
     @State private var isSearching: Bool = false
+    var viewModel = StyleGuideViewModel()
+    
     public init() {}
     
     public var body: some View {
         ScrollView {
+            Button("GO TO CAT!") {
+                viewModel.catButtonTapped()
+            }
             Text("Style Guide")
                 .largeTitleTextStyle()
             UnderlineView()

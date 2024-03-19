@@ -16,6 +16,12 @@ public struct HomeNavigationView: View {
                     switch destination {
                     case .styleGuide:
                         viewModel.createStyleGuideView()
+                    case .catView:
+                        viewModel.createCatView()
+                    case .someMovie(movie: let movie):
+                        viewModel.createSomeMovieView(movie: movie)
+                    case .dogView:
+                        viewModel.createDogView()
                     }
                 }
                 .id("homeView")
